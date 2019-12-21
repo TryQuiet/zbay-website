@@ -14,6 +14,10 @@ a:hover {
   text-decoration: none;
 }
 
+.zb-footer__copyright-text a {
+  color: inherit;
+}
+
 .zb-hero {
   position: static;
   z-index: 10;
