@@ -136,70 +136,15 @@
             A social marketplace for physical goods, information, and ideas.
             <span class="zb-hero__highlight-text">Owned by no one</span>.
           </h1>
-          <div class="zb-form-block-cta w-form">
-            <form
-              id="registerform"
-              name="email-form"
-              data-name="Email Form"
-              class="zb-cta-form"
-            >
-              <input
-                id="email"
-                type="text"
-                class="zb-enter-your-email w-input"
-                maxlength="256"
-                name="email"
-                data-name="Email"
-                placeholder="Enter your email"
-                id="name"
-              /><input
-                type="submit"
-                value="Join the beta"
-                data-wait="Please wait..."
-                class="submit-button w-button"
-              />
-            </form>
-
-            <div class="success-message w-form-done">
-              <div class="text-block">
-                Thank you! Your submission has been received!
-              </div>
-            </div>
-            <div class="error-message w-form-fail">
-              <div class="text-block-2">
-                Oops! Something went wrong while submitting the form.
-              </div>
-            </div>
-          </div>
-          <a href="#" class="zb-hero-button w-button">Download for Mac</a>
+          <a id="zb-autodetect-platform" href="#" class="zb-hero-button w-button">Download for Mac</a>
           <ul class="zb-hero__sec-links-list">
             <li class="zb-hero__sec-link-item">
-              <div class="zb-hero__sec-link-desc">
-                Windows?
-                <a href="#" class="zb-hero__sec-link"
-                  >Download Zbay for Windows</a
-                >
-              </div>
+              <div id="zb-first-box" class="zb-hero__sec-link-desc"></div>
+              <a id="zb-first-other-target-link" href="#" class="zb-hero__sec-link"></a>
             </li>
             <li class="zb-hero__sec-link-item">
-              <div class="zb-hero__sec-link-desc">
-                Linux?
-                <a href="#" class="zb-hero__sec-link"
-                  >Download Zbay for Linux</a
-                >
-              </div>
-            </li>
-            <li class="zb-hero__sec-link-item">
-              <div class="zb-hero__sec-link-desc">
-                Curious why we made it?
-                <a href="#" class="zb-hero__sec-link">Read our essay</a>
-              </div>
-            </li>
-            <li class="zb-hero__sec-link-item">
-              <div class="zb-hero__sec-link-desc">
-                <em>How</em> private and anonymous?
-                <a href="#" class="zb-hero__sec-link">Learn about Zcash</a>
-              </div>
+              <div id="zb-second-box" class="zb-hero__sec-link-desc"></div>
+              <a id="zb-second-other-target-link" href="#" class="zb-hero__sec-link"></a>
             </li>
           </ul>
           <div class="zb-warning">
@@ -1545,25 +1490,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/webflow.js" type="text/javascript"></script>
-    <script>
-      $(function () {
-        $('#registerform').submit(function (event) {
-          try {
-            event.preventDefault()
-            $.ajax({
-              contentType: 'application/json',
-              type: 'POST',
-              url: 'https://handlers.zbay.app/beta',
-              data: JSON.stringify({ email: event.target.email.value })
-            })
-            alert(`We’ll be in touch!`)
-            $('#email').val('')
-          } catch (error) {
-            console.log('Failed to send an email')
-          }
-        })
-      })
-    </script>
+    <script src="js/browserDetectionScript.js" type="text/javascript"></script>
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   </body>
 </html>

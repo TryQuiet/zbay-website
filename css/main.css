@@ -2079,16 +2079,23 @@ a:hover {
   font-weight: 400;
 }
 
-.zb-hero-button {
-  display: none;
+.zb-hero-button-mac {
+  background-image: url('../images/5d2cf4f399a6906ce73b825f/5d44761e95c1f5149889f6e2_apple.svg');
   padding: 19px 40px 19px 71px;
+}
+
+.zb-hero-button-mac:hover {
+  background-image: url('../images/5d2cf4f399a6906ce73b825f/5d44761e95c1f5149889f6e2_apple.svg');
+}
+
+.zb-hero-button {
+  padding: 19px 40px 19px 40px;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
   background-color: #521b74;
-  background-image: url('https://assets.website-files.com/5d2cf4f399a6906ce73b825f/5d44761e95c1f5149889f6e2_apple.svg');
   background-position: 30px 15px;
   background-size: 24px;
   background-repeat: no-repeat;
@@ -2106,7 +2113,6 @@ a:hover {
 
 .zb-hero-button:hover {
   background-color: #e42656;
-  background-image: url('https://assets.website-files.com/5d2cf4f399a6906ce73b825f/5d44761e95c1f5149889f6e2_apple.svg');
   background-position: 30px 15px;
   background-size: 24px;
   background-repeat: no-repeat;
@@ -2117,7 +2123,6 @@ a:hover {
 }
 
 .zb-hero__sec-links-list {
-  display: none;
   margin-top: 24px;
   margin-bottom: 24px;
   padding-left: 0px;
@@ -2126,6 +2131,7 @@ a:hover {
 }
 
 .zb-hero__sec-link {
+  margin-left: 5px;
   color: #67bfd3;
   text-decoration: none;
 }
@@ -2135,6 +2141,8 @@ a:hover {
 }
 
 .zb-hero__sec-link-item {
+  display: flex;
+  flex-wrap: nowrap;
   margin-bottom: 8px;
 }
 
