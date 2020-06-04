@@ -5,6 +5,9 @@ var firstOtherLink = document.getElementById('zb-first-other-target-link');
 var secondOtherLink = document.getElementById('zb-second-other-target-link');
 
 const setAttributes = (version) => {
+  if (version === 'mac') {
+    linkButton.classList.add('zb-hero-button-mac');
+  }
   const versions = ['windows', 'mac', 'linux']
   const downloadText = {
     windows: 'Download for Windows',
