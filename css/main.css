@@ -2079,15 +2079,6 @@ a:hover {
   font-weight: 400;
 }
 
-.zb-hero-button-mac {
-  background-image: url('../images/5d44761e95c1f5149889f6e2_apple.svg');
-  padding: 19px 40px 19px 71px;
-}
-
-.zb-hero-button-mac:hover {
-  background-image: url('../images/5d44761e95c1f5149889f6e2_apple.svg');
-}
-
 .zb-hero-button {
   padding: 19px 40px 19px 40px;
   -webkit-box-align: center;
@@ -2120,6 +2111,15 @@ a:hover {
   -webkit-transform: scale(1.02);
   -ms-transform: scale(1.02);
   transform: scale(1.02);
+}
+
+.zb-hero-button-mac {
+  background-image: url('../images/5d44761e95c1f5149889f6e2_apple.svg');
+  padding: 19px 40px 19px 71px;
+}
+
+.zb-hero-button-mac:hover {
+  background-image: url('../images/5d44761e95c1f5149889f6e2_apple.svg');
 }
 
 .zb-hero__sec-links-list {
