@@ -42,89 +42,397 @@ html {
   </div>
   <div id="faq" class="zb-faq-section">
     <div class="zb-faq">
-      <h1 class="zb-section-heading">FAQ</h1>
-      <ul role="list" class="zb-faq__faq-list">
+      <h1
+        data-w-id="57a5976b-66ed-76da-385d-08b82ab3d7e9"
+        class="zb-section-heading"
+      >
+        FAQ
+      </h1>
+      <ul class="zb-faq__faq-list">
         <li class="zb-faq__faq-item">
-          <h2 class="zb-faq__question">Should I trust Zbay to protect me against [insert specific adversary here]?</h2>
-          <p class="zb-faq__p">No. Zbay, and Zcash, are experimental technologies. More generally, given the state of computer security, you should avoid using electronic means to communicate anything that could cause unacceptable harm to you if discovered.</p>
+          <h2 class="zb-faq__question">
+            Should I trust Zbay to protect me against [insert specific
+            adversary here]?
+          </h2>
+          <p class="zb-faq__p">
+            No. Zbay, and Zcash, are experimental technologies. More
+            generally, given the state of computer security, you should avoid
+            using electronic means to communicate anything that could cause
+            unacceptable harm to you if discovered.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Are direct messages private?</h2>
-          <p class="zb-faq__p">Direct messages you send to another user should be as private as any Zcash encrypted memo. You can learn more about Zcash encrypted memos <a href="https://electriccoin.co/blog/encrypted-memo-field/">here</a>.</p>
+          <p class="zb-faq__p">
+            Direct messages you send to another user should be as private as
+            any Zcash encrypted memo. You can learn more about Zcash encrypted
+            memos
+            <a href="https://electriccoin.co/blog/encrypted-memo-field/"
+              >here</a
+            >.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Are channels private?</h2>
-          <p class="zb-faq__p">Messages sent to a channel are as private as Zcash <a href="https://electriccoin.co/blog/encrypted-memo-field/">encrypted memos</a> and the viewing key to that channel. Like a Bitcoin address or a Google Doc set to “anyone with the link”, the key provides full access. Unlike a Google Doc, messages on a Zcash channel can’t be deleted, so anyone with access, or anyone who controls a medium the key passes through, could potentially gain access.</p>
+          <p class="zb-faq__p">
+            Messages sent to a channel are as private as Zcash
+            <a href="https://electriccoin.co/blog/encrypted-memo-field/"
+              >encrypted memos</a
+            >
+            and the viewing key to that channel. Like a Bitcoin address or a
+            Google Doc set to “anyone with the link”, the key provides full
+            access. Unlike a Google Doc, messages on a Zcash channel can’t be
+            deleted, so anyone with access, or anyone who controls a medium
+            the key passes through, could potentially access all messages sent
+            to that channel forever.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Will messages be private forever?</h2>
-          <p class="zb-faq__p">No. In channels with large numbers of people, it’s likely that one of the participants will eventually leak the key or messages themselves, to some other medium. Even if the key is kept secure, it’s likely that the discovery of bugs or advancements in cryptography (e.g. quantum cryptography) will make all or some Zbay messages public at some point in the future. That said, in an age where intelligence agencies and companies routinely scoop up data and store it forever, this is true for most encrypted communication.</p>
+          <p class="zb-faq__p">
+            No. In channels with large numbers of people, it’s likely that one
+            of the participants will eventually leak the key or messages
+            themselves, to some other medium. Even if the key is kept secure,
+            it’s likely that the discovery of bugs or advancements in
+            cryptography (e.g. quantum cryptography) will make all or some
+            Zbay messages public at some point in the future. That said, in an
+            age where intelligence agencies and companies routinely scoop up
+            data and store it forever, this is true for most encrypted
+            communication.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Can messages be deleted?</h2>
-          <p class="zb-faq__p">No. If you delete your account, you will lose access to your messages. But your messages will still be accessible to recipients.</p>
+          <p class="zb-faq__p">
+            No. If you delete your account, you will lose access to your
+            messages. But your messages will still be accessible to
+            recipients.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Is it anonymous?</h2>
-          <p class="zb-faq__p">If someone has your Zcash address or username, you can receive messages from them anonymously if Zcash’s anonymity claims are correct. However, replying, sending messages, registering an account, or creating a public channel could reveal your IP address.</p>
-          <p class="zb-faq__p">Our hope is that the Zcash team will address sender anonymity in the future, and tools like VPNs or Tor may provide additional anonymity protection in the meantime.</p>
+          <p class="zb-faq__p">
+            If someone has your Zcash address or username, you can receive
+            messages and funds from them without revealing your IP address or
+            identity, if Zcash’s anonymity claims are correct. (Note that your
+            IP address would be visible as a Zcash or perhaps Zbay user, and
+            there may not be many of those.) On the other hand, replying,
+            sending messages, registering an account, or creating a public
+            channel could reveal your IP address to an attacker who was
+            actively monitoring the Zcash network at that moment.
+          </p>
+          <p class="zb-faq__p">
+            Our hope is that the Zcash team will address sender anonymity in
+            the future, and tools like VPNs or Tor may provide additional
+            anonymity protection in the meantime.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
-          <h2 class="zb-faq__question">Can third parties see who I’m talking to?</h2>
-          <p class="zb-faq__p">Zbay messages use Zcash shielded transactions, so sender and recipient metadata is encrypted. You can learn more about shielded transactions <a href="https://z.cash/technology/">here</a>.</p>
-          <p class="zb-faq__p">However, there may be methods to guess who is talking to who (e.g. based on the timing of messages) or through other attacks.</p>
+          <h2 class="zb-faq__question">
+            Can third parties see who I’m talking to?
+          </h2>
+          <p class="zb-faq__p">
+            Zbay messages use Zcash shielded transactions, so sender and
+            recipient metadata is encrypted. You can learn more about shielded
+            transactions <a href="https://z.cash/technology/">here</a>.
+          </p>
+          <p class="zb-faq__p">
+            However, there may be methods to guess who is talking to who (e.g.
+            based on the timing of messages) or through other attacks.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Can I use Tor with Zbay?</h2>
-          <p class="zb-faq__p">Yes, Zbay includes basic Tor support, which lets you instruct the Zcash node to connect through Tor. However, there are important <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/tor.html">important warnings</a> about Tor support in Zcash. To use Tor, <a href="https://www.torproject.org/download/">install Tor Browser</a>, run it, select the “Connect through Tor” option on startup, and make sure the proxy URL is correct.</p>
+          <p class="zb-faq__p">
+            Yes, Zbay includes basic Tor support, which lets you instruct the
+            Zcash node to connect through Tor. However, there are important
+            <a
+              href="https://zcash.readthedocs.io/en/latest/rtd_pages/tor.html"
+              >important warnings</a
+            >
+            about Tor support in Zcash. To use Tor,
+            <a href="https://www.torproject.org/download/"
+              >install Tor Browser</a
+            >, run it, select the “Connect through Tor” option on startup, and
+            make sure the proxy URL is correct.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Can I earn money with Zbay?</h2>
-          <p class="zb-faq__p">Yes! You can earn money by sharing Zbay with friends. It works like an affiliate code. You can send them a small amount of money (say, $1 if you like) to encourage them to install Zbay, including your address in the invitation link to receive a small percentage of what they spend, at least until they update their donation settings. (You could even send the link to a large audience, offering a larger sum of money as a prize. The first person to import the link would win the prize, and you would receive a share of whatever funds all users who accepted the invitation spend on Zbay.)</p>
-          <p class="zb-faq__p">You can earn money by starting a channel. Channel owners receive small amounts of money when messages are sent to a channel, and they can set the minimum spend required for a message to be visible. This can help reduce spam, but it can also earn revenue for the channel, to support the work of moderation, for example.</p>
-          <p class="zb-faq__p">Finally, you can advertise and sell physical or digital goods on Zbay, too. The market is likely to be very small at first. But if you’d like to pioneer a new kind of platform, try it out. Because Zbay doesn’t have a built-in ratings system (yet) we recommend focusing on building a reputation with a small group of people as a trusted seller and working up from there.</p>
+          <p class="zb-faq__p">
+            Yes! You can earn money by sharing Zbay with friends. It works
+            like an affiliate code. You can send them a small amount of money
+            (say, $1 if you like) to encourage them to install Zbay, including
+            your address in the invitation link to receive a small percentage
+            of what they spend, at least until they update their donation
+            settings. (You could even send the link to a large audience,
+            offering a larger sum of money as a prize. The first person to
+            import the link would win the prize, and you would receive a share
+            of whatever funds all users who accepted the invitation spend on
+            Zbay.)
+          </p>
+          <p class="zb-faq__p">
+            You can earn money by starting a channel. Channel owners receive
+            small amounts of money when messages are sent to a channel, and
+            they can set the minimum spend required for a message to be
+            visible. This can help reduce spam, but it can also earn revenue
+            for the channel, to support the work of moderation, for example.
+          </p>
+          <p class="zb-faq__p">
+            Finally, you can advertise and sell physical or digital goods on
+            Zbay, too. The market is likely to be very small at first. But if
+            you’d like to pioneer a new kind of platform, try it out. Because
+            Zbay doesn’t have a built-in ratings system (yet) we recommend
+            focusing on building a reputation with a small group of people as
+            a trusted seller and working up from there.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Do Zbay channels have moderation?</h2>
-          <p class="zb-faq__p">Yes. The channel owner can appoint moderators, and moderators can hide posts, hide all posts by a certain user, ban messages to the channel from unregistered users, and set a minimum spend to message the channel.</p>
+          <p class="zb-faq__p">
+            Yes. The channel owner can appoint moderators, and moderators can
+            hide posts, hide all posts by a certain user, ban messages to the
+            channel from unregistered users, and set a minimum spend to
+            message the channel.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Can moderators delete messages?</h2>
-          <p class="zb-faq__p">No, they can only instruct the Zbay app to hide them from users. Messages cannot be deleted.</p>
+          <p class="zb-faq__p">
+            No, they can only instruct the Zbay app to hide them from users.
+            Messages cannot be deleted.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
-          <h2 class="zb-faq__question">If another Zbay user scams me, do I have any recourse?<br></h2>
-          <p class="zb-faq__p">Probably not, in the sense of recovering your funds. However, you can post about the scam in Zbay channels and on any relevant subreddits, to warn other potential victims. Channel moderators could potentially block the scam seller, also. We hope to have build a ratings system of some kind.</p>
+          <h2 class="zb-faq__question">
+            If another Zbay user scams me, do I have any recourse?<br />
+          </h2>
+          <p class="zb-faq__p">
+            Probably not, in the sense of recovering your funds. However, you
+            can post about the scam in Zbay channels and on any relevant
+            subreddits, to warn other potential victims. Channel moderators
+            could potentially block the scam seller, also. We hope to have
+            build a ratings system of some kind.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
-          <h2 class="zb-faq__question">Can I post images or other files in Zbay?<br></h2>
-          <p class="zb-faq__p">Not at this time, though you may be able to post very small images or files in the future.</p>
+          <h2 class="zb-faq__question">
+            Can I post images or other files in Zbay?<br />
+          </h2>
+          <p class="zb-faq__p">
+            Not at this time, though you may be able to post very small images
+            or files in the future.
+          </p>
+        </li>
+        <li id="node-info" class="zb-faq__faq-item">
+          <h2 class="zb-faq__question">
+            What does the information in the "node status" section mean?<br />
+          </h2>
+          <p class="zb-faq__p">
+            Network - This confirms that you're connected to the Zcash mainnet&mdash;where you will send and receive real Zcash&mdash;as opposed to the Zcash testnet.
+          </p>
+          <p class="zb-faq__p">
+            Blocks - Zcash transactions are stored in blocks. Here you see how many blocks Zbay has synced so far, and the total number of blocks available, from Zbay's perspective.
+          </p>
+          <p class="zb-faq__p">
+            Connections - This is the number of other Zcash nodes you are connected to. Typically you will connect to 8 nodes.
+          </p>
+          <p class="zb-faq__p">
+            UTXO - This is the number of unspent outputs. We show this number here because running out of UTXOs will temporarily block you from sending messages, even if you have funds. (This should almost never happen, especially after you've been using Zbay for a bit.)
+          </p>
         </li>
         <li class="zb-faq__faq-item">
-          <h2 class="zb-faq__question">What is Zbay’s carbon footprint? Will it destroy the planet?<br></h2>
-          <p class="zb-faq__p">An October 2019 <a href="https://forum.zcashcommunity.com/t/dev-fund-proposal-carbon-offsetting/34834/6">estimate</a> of the Zcash network’s carbon footprint estimated that it used the equivalent of 7.09 American households per year. So at the moment it will not destroy the planet, no!</p>
-          <p class="zb-faq__p">This footprint could grow in the future if the price of Zcash increases. It could also decrease as the Zcash network becomes more efficient by introducing things like proof of stake, as renewables become cheaper or more prevalent in China (where most cryptocurrency mining happens), as carbon taxes spread in prevalence, or due to other factors.</p>
-          <p class="zb-faq__p">According to the same estimate above, offsetting the carbon emissions of the Zcash network would cost $5,000/year, which is pretty manageable.</p>
+          <h2 class="zb-faq__question">
+            What is Zbay’s carbon footprint? Will it destroy the planet?<br />
+          </h2>
+          <p class="zb-faq__p">
+            An October 2019
+            <a
+              href="https://forum.zcashcommunity.com/t/dev-fund-proposal-carbon-offsetting/34834/6"
+              >estimate</a
+            >
+            of the Zcash network’s carbon footprint estimated that it used the
+            equivalent of 7.09 American households per year. So at the moment
+            it will not destroy the planet, no!
+          </p>
+          <p class="zb-faq__p">
+            This footprint could grow in the future if the price of Zcash
+            increases. It could also decrease as the Zcash network becomes
+            more efficient by introducing things like proof of stake, as
+            renewables become cheaper or more prevalent in China (where most
+            cryptocurrency mining happens), as carbon taxes spread in
+            prevalence, or due to other factors.
+          </p>
+          <p class="zb-faq__p">
+            According to the same estimate above, offsetting the carbon
+            emissions of the Zcash network would cost $5,000/year, which is
+            pretty manageable.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
-          <h2 class="zb-faq__question">How many people will be able to use Zbay?<br></h2>
-          <p class="zb-faq__p">Right now, not that many! The Zcash network can process about 6 “transactions” per second. Zbay can potentially fit a few short messages into a single transaction, so let’s say it can handle 10 messages per second. If Zbay quickly grows in popularity, it could become less reliable or even unusable.</p>
-          <p class="zb-faq__p">There are many ways Zbay could put less of a burden on the Zcash network. Meanwhile, the Zcash team seems intent on making the Zcash network scale to billions of users, and has a credible path towards doing so. So it could be that, by the time Zbay becomes popular, the Zcash network is no longer a bottleneck.</p>
+          <h2 class="zb-faq__question">
+            How many people will be able to use Zbay?<br />
+          </h2>
+          <p class="zb-faq__p">
+            Right now, not that many! The Zcash network can process about 6
+            “transactions” per second. Zbay can potentially fit a few short
+            messages into a single transaction, so let’s say it can handle 10
+            messages per second. If Zbay quickly grows in popularity, it could
+            become less reliable or even unusable.
+          </p>
+          <p class="zb-faq__p">
+            There are many ways Zbay could put less of a burden on the Zcash
+            network. Meanwhile, the Zcash team seems intent on making the
+            Zcash network scale to billions of users, and has a credible path
+            towards doing so. So it could be that, by the time Zbay becomes
+            popular, the Zcash network is no longer a bottleneck.
+          </p>
         </li>
         <li class="zb-faq__faq-item">
-          <h2 class="zb-faq__question">What if someone uses Zbay to do something awful?<br></h2>
-          <p class="zb-faq__p">(TL;DR: Even if Zbay pursues state-of-the-art approaches to protect users’ privacy, which it has a moral obligation to do, that will not stop well-resourced law-enforcement institutions from subverting or working around these protections to enforce the law, which is as it should be. In short, we take the same position that Apple has taken in their design of the iPhone.)</p>
-          <p class="zb-faq__p">This question is important and deserves a complete answer, so this section is itself a mini-essay on the state of technology, democracy, and power. <br></p>
-          <p class="zb-faq__p">First, unlike with centralized services, all of the basic data necessary to hold lawbreaking users and channel owners accountable will be equally available to everyone on the Internet. If anyone is considering using Zbay to break the law, this fact should give them pause. While Zbay seeks to protect the privacy of its users, the current state of cybersecurity is such that it is always possible, even against the most advanced privacy and anonymity tools, to identify and disrupt those seen as bad actors, given sufficient resources. Unlike with cloud platforms like Facebook, agencies and researchers will not need special privileges to access the data they need; it will all be in the open to everyone, to the extent it is to anyone.<br></p>
-          <p class="zb-faq__p">Perhaps the best example of how technology can be as secure and private as possible while still leaving room for law enforcement is the iPhone. Apple provides the best encryption they can for every iPhone, to protect their customers’ photos, messages, and online accounts if a phone is lost or stolen. When, to investigate a terrorist attack, the FBI demanded Apple change this code to let them access a seized iPhone, Apple famously stood firm and refused. Apple argued that this “back door” would undermine the privacy and security of all their customers, including journalists, world leaders, and engineers maintaining critical infrastructure—which would in turn undermine <em>everyone’s</em> safety. Soon after, the FBI revealed that it had contracted a highly specialized service that, despite Apple’s best efforts, was able to break the security protecting the seized iPhone. This is hardly an isolated case: time and again, when products have used encryption to protect privacy, law enforcement agencies complain loudly about their imminent powerlessness against scary adversaries, while quietly mustering their abundant resources to break through technical barriers and bring the most technically-savvy bad actors to justice. <br></p>
-          <p class="zb-faq__p">Zbay will go as far as it can to protect users’ privacy and anonymity. If governments want to spy on conversations or identify users they might need to go to great lengths to do so. It might be hard, and that’s okay: violating peoples’ privacy in a democracy is <em>supposed</em> to be hard. <br></p>
-          <p class="zb-faq__p">Unlike centralized services, the Zbay team will not hold any useful data or be a gatekeeper to their ability to do this, and no government will have privileged access to user data on Zbay simply because they are the home jurisdiction of the company. In a world where communication happens on peer-to-peer platforms like Zbay, countries and organizations with advanced offensive hacking and surveillance capabilities will enjoy an advantage when it comes to data collection and enforcement against unlawful behavior. However they will have to choose their targets carefully, since any methods used to enforce the law could also be used by bad actors against legitimate users once widely known. (Which means the Zbay platform or Zcash network will have a basic duty to its users to fix these privacy problems once they are discovered.) <br></p>
-          <p class="zb-faq__p">This pattern places a strong limit on mass surveillance while, given the ever imperfect state of cybersecurity, providing law enforcement with ample options for enforcing against antisocial behavior in important cases.<br></p>
-          <p class="zb-faq__p">We believe that law enforcement by public institutions rooted in democracy—not rules created by private platforms—is the correct way to hold online communities and their participants accountable for their behavior. Right now, governments and shareholders are pressuring large online platforms to arbitrarily create their own private rules, outside the representation guarantees of democratic structures. This is wrong: democracies should not abdicate their role and give unaccountable private power total control over what people can and cannot say online. Instead, democracies should create clear, consistent standards that protect free expression and create public institutions capable of enforcing these principles directly against their most destructive offenders. Zbay is completely compatible with this vision.<br></p>
-          <p class="zb-faq__p">At the same time, every online platform exists in a global reality where some governments are sometimes corrupt, unrepresentative, violent, and repressive. So we must create platforms that give ordinary people the power to resist their local laws, speak truth to power, and—even with the best privacy and anonymity tools when working against well-resourced adversaries like governments—risk getting caught. <br></p>
-          <p class="zb-faq__p">After all, accountability between law and online discussion runs in two directions: for residents of democracies to hold each other accountable, they need to be able to enforce the law—but for residents of non-democracies to hold each other accountable, they need to somehow hold their authoritarian governments accountable, which means being able to break the law. One can say this isn’t the way things should be, but it is the way things are now: much of the world is not governed by democracy. This stark fact means that everyone who cares about democracy must agree governments need strong checks—as strong as we can make them—on their power to control what people do online.<br></p>
-          <p class="zb-faq__p">We believe that all of us—especially those of us who enjoy the benefits of democracy—owe residents of repressive countries the best protections for privacy we can practically muster, so that in pivotal moments they can gather in courage and make their voices heard.<br></p>
-          <p class="zb-faq__p">This belief doesn’t exist in a vacuum. It emerges from a centuries-old discussion on the value of freedom of expression, and is surrounded right now by an ever-accelerating debate pushed forward by a dizzying barrage of terrifying news and political events. We recognize that not all the answers will be visible right now, but we hope that by launching Zbay into the world, we can dig deeper down, past the first wave of superficial responses, down to some thoughtful and robust answer that can last. We welcome and treasure the conversation.<br></p>
+          <h2 class="zb-faq__question">
+            What if someone uses Zbay to do something awful?<br />
+          </h2>
+          <p class="zb-faq__p">
+            (TL;DR: Even if Zbay pursues state-of-the-art approaches to
+            protect users’ privacy, which it has a moral obligation to do,
+            that will not stop well-resourced law-enforcement institutions
+            from subverting or working around these protections to enforce the
+            law, which is as it should be. In short, we take the same position
+            that Apple has taken in their design of the iPhone.)
+          </p>
+          <p class="zb-faq__p">
+            This question is important and deserves a complete answer, so this
+            section is itself a mini-essay on the state of technology,
+            democracy, and power.&nbsp;<br />
+          </p>
+
+          <p class="zb-faq__p">
+            First, unlike with centralized services, all of the basic data
+            necessary to hold lawbreaking users and channel owners accountable
+            will be equally available to everyone on the Internet. If anyone
+            is considering using Zbay to break the law, this fact should give
+            them pause. While Zbay seeks to protect the privacy of its users,
+            the current state of cybersecurity is such that it is always
+            possible, even against the most advanced privacy and anonymity
+            tools, to identify and disrupt those seen as bad actors, given
+            sufficient resources. Unlike with cloud platforms like Facebook,
+            agencies and researchers will not need special privileges to
+            access the data they need; it will all be in the open to everyone,
+            to the extent it is to anyone.<br />
+          </p>
+
+          <p class="zb-faq__p">
+            Perhaps the best example of how technology can be as secure and
+            private as possible while still leaving room for law enforcement
+            is the iPhone. Apple provides the best encryption they can for
+            every iPhone, to protect their customers’ photos, messages, and
+            online accounts if a phone is lost or stolen. When, to investigate
+            a terrorist attack, the FBI demanded Apple change this code to let
+            them access a seized iPhone, Apple famously stood firm and
+            refused. Apple argued that this “back door” would undermine the
+            privacy and security of all their customers, including
+            journalists, world leaders, and engineers maintaining critical
+            infrastructure—which would in turn undermine
+            <em>everyone’s</em> safety. Soon after, the FBI revealed that it
+            had contracted a highly specialized service that, despite Apple’s
+            best efforts, was able to break the security protecting the seized
+            iPhone. This is hardly an isolated case: time and again, when
+            products have used encryption to protect privacy, law enforcement
+            agencies complain loudly about their imminent powerlessness
+            against scary adversaries, while quietly mustering their abundant
+            resources to break through technical barriers and bring the most
+            technically-savvy bad actors to justice.&nbsp;<br />
+          </p>
+
+          <p class="zb-faq__p">
+            Zbay will go as far as it can to protect users’ privacy and
+            anonymity. If governments want to spy on conversations or identify
+            users they might need to go to great lengths to do so. It might be
+            hard, and that’s okay: violating peoples’ privacy in a democracy
+            is <em>supposed</em> to be hard.&nbsp;<br />
+          </p>
+          <p class="zb-faq__p">
+            Unlike centralized services, the Zbay team will not hold any
+            useful data or be a gatekeeper to their ability to do this, and no
+            government will have privileged access to user data on Zbay simply
+            because they are the home jurisdiction of the company. In a world
+            where communication happens on peer-to-peer platforms like Zbay,
+            countries and organizations with advanced offensive hacking and
+            surveillance capabilities will enjoy an advantage when it comes to
+            data collection and enforcement against unlawful behavior. However
+            they will have to choose their targets carefully, since any
+            methods used to enforce the law could also be used by bad actors
+            against legitimate users once widely known. (Which means the Zbay
+            platform or Zcash network will have a basic duty to its users to
+            fix these privacy problems once they are discovered.)&nbsp;<br />
+          </p>
+
+          <p class="zb-faq__p">
+            This pattern places a strong limit on mass surveillance while,
+            given the ever imperfect state of cybersecurity, providing law
+            enforcement with ample options for enforcing against antisocial
+            behavior in important cases.<br />
+          </p>
+
+          <p class="zb-faq__p">
+            We believe that law enforcement by public institutions rooted in
+            democracy—not rules created by private platforms—is the correct
+            way to hold online communities and their participants accountable
+            for their behavior. Right now, governments and shareholders are
+            pressuring large online platforms to arbitrarily create their own
+            private rules, outside the representation guarantees of democratic
+            structures. This is wrong: democracies should not abdicate their
+            role and give unaccountable private power total control over what
+            people can and cannot say online. Instead, democracies should
+            create clear, consistent standards that protect free expression
+            and create public institutions capable of enforcing these
+            principles directly against their most destructive offenders. Zbay
+            is completely compatible with this vision.<br />
+          </p>
+
+          <p class="zb-faq__p">
+            At the same time, every online platform exists in a global reality
+            where some governments are sometimes corrupt, unrepresentative,
+            violent, and repressive. So we must create platforms that give
+            ordinary people the power to resist their local laws, speak truth
+            to power, and—even with the best privacy and anonymity tools when
+            working against well-resourced adversaries like governments—risk
+            getting caught.&nbsp;<br />
+          </p>
+
+          <p class="zb-faq__p">
+            After all, accountability between law and online discussion runs
+            in two directions: for residents of democracies to hold each other
+            accountable, they need to be able to enforce the law—but for
+            residents of non-democracies to hold each other accountable, they
+            need to somehow hold their authoritarian governments accountable,
+            which means being able to break the law. One can say this isn’t
+            the way things should be, but it is the way things are now: much
+            of the world is not governed by democracy. This stark fact means
+            that everyone who cares about democracy must agree governments
+            need strong checks—as strong as we can make them—on their power to
+            control what people do online.<br />
+          </p>
+
+          <p class="zb-faq__p">
+            We believe that all of us—especially those of us who enjoy the
+            benefits of democracy—owe residents of repressive countries the
+            best protections for privacy we can practically muster, so that in
+            pivotal moments they can gather in courage and make their voices
+            heard.<br />
+          </p>
+
+          <p class="zb-faq__p">
+            This belief doesn’t exist in a vacuum. It emerges from a
+            centuries-old discussion on the value of freedom of expression,
+            and is surrounded right now by an ever-accelerating debate pushed
+            forward by a dizzying barrage of terrifying news and political
+            events. We recognize that not all the answers will be visible
+            right now, but we hope that by launching Zbay into the world, we
+            can dig deeper down, past the first wave of superficial responses,
+            down to some thoughtful and robust answer that can last. We
+            welcome and treasure the conversation.<br />
+          </p>
         </li>
       </ul>
     </div>
