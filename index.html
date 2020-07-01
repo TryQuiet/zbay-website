@@ -1,72 +1,109 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Fri Jun 12 2020 19:35:59 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="5eda64bd77a8dcf0f8ed8a11" data-wf-site="5eda64bd77a8dc6e05ed8a12">
-<head>
-  <meta charset="utf-8">
-  <title>Home-v2</title>
-  <meta content="Home-v2" property="og:title">
-  <meta content="Home-v2" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/zbay-v2.webflow.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({  google: {    families: ["Rubik:300,regular,700,900"]  }});</script>
-  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
-  <style type="text/css">
-<!--
-   @media screen and (min-width: 1200px) {
-	.w-container {
-	max-width: 1170px;
-	}
-}
--->  
-html {
-    -webkit-appearance: none;
-	}
-html {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	}   
-</style>
-</head>
-<body class="body"><a href="#" class="zb-back-to-top w-inline-block"><img src="images/arrow-up.svg" alt="" class="image"></a>
-  <div class="w-embed">
-    <style>
-input:focus, textarea:focus, select:focus{
-        outline: none;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: 2px solid 67bfd3;
-  -webkit-text-fill-color: 67bfd3;
-  font-size: 16px !important;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
-input[type=text] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}   
-</style>
-  </div>
-  <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="zb-navbar w-nav"><a href="index.html" aria-current="page" class="brand w-nav-brand w--current"><img src="images/logo-lockup--circle.svg" width="142.5" alt="" class="image-2"></a>
-    <div class="spacer"></div>
-    <nav role="navigation" class="nav-menu w-nav-menu"><a href="how.html" class="zb-nav-text-link w-nav-link">How it works</a><a href="why.html" class="zb-nav-text-link w-nav-link">Why  Zbay?</a><a href="faq.html" class="zb-nav-text-link w-nav-link">FAQ</a><a href="https://twitter.com/zbayapp" class="zb-flex-nav-link w-inline-block"><img src="images/twitter--black.svg" alt="" class="zb-nav-icon"><div class="zb-nav-text">Twitter</div></a><a href="https://github.com/ZbayApp/zbay" class="zb-flex-nav-link w-inline-block"><img src="images/github--black.svg" alt="" class="zb-nav-icon"><div class="zb-nav-text">Github</div></a></nav>
-    <div class="menu-button w-nav-button"><img src="images/hamburger.svg" alt="" class="image-3"></div>
-  </div>
+<!--  Last Published: Wed Dec 18 2019 23:08:44 GMT+0000 (Coordinated Universal Time)  -->
+<html
+  data-wf-page="5dea893d046bdd7e43901bee"
+  data-wf-site="5d2cf4f399a6906ce73b825f"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>Zbay</title>
+    <meta content="Zbay" property="og:title" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rubik:300,regular,700,900"
+      media="all"
+    />
+    <script type="text/javascript">
+      WebFont.load({ google: { families: ['Rubik:300,regular,700,900'] } })
+    </script>
+    <!--[if lt IE 9
+      ]><script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+        type="text/javascript"
+      ></script
+    ><![endif]-->
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = ' w-mod-'
+        ;(n.className += t + 'js'),
+          ('ontouchstart' in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + 'touch')
+      })(window, document)
+    </script>
+    <link href="images/favicon.svg" rel="shortcut icon" type="image/x-icon" />
+    <link href="images/favicon.svg" rel="apple-touch-icon" />
+    <style type="text/css">
+      @media screen and (min-width: 1200px) {
+        .w-container {
+          max-width: 1170px;
+        }
+      }
+
+      html {
+        -webkit-appearance: none;
+      }
+
+      html {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+    </style>
+  </head>
+
+  <body class="body">
+    <div class="zb-nav">
+      <div class="zb-nav__btns-cont">
+        <ul class="zb-nav__pri-btns-list">
+          <li class="zb-nav__pri-btn-item">
+            <a href="#why" class="zb-nav__pri-btn w-inline-block">
+              <div class="zb-pri-btn-text">Why Zbay?</div>
+            </a>
+          </li>
+          <li class="zb-nav__pri-btn-item">
+            <a href="#how" class="zb-nav__pri-btn w-inline-block">
+              <div class="zb-pri-btn-text">How it works?</div>
+            </a>
+          </li>
+          <li class="zb-nav__pri-btn-item">
+            <a href="#faq" class="zb-nav__pri-btn w-inline-block">
+              <div class="zb-pri-btn-text">FAQ</div>
+            </a>
+          </li>
+        </ul>
+        <ul class="zb-nav__sec-btns-list">
+          <li class="zb-nav__sec-btn-item">
+            <a
+              href="https://twitter.com/zbayapp"
+              class="zb-nav__sec-btn w-inline-block"
+              ><img
+                src="./images/twitter--black.svg"
+                alt=""
+                class="zb-nav__sec-btn-image"
+            /></a>
+          </li>
+          <li class="zb-nav__sec-btn-item">
+            <a
+              href="https://github.com/ZbayApp/zbay"
+              class="zb-nav__sec-btn w-inline-block"
+              ><img
+                src="./images/github--black.svg"
+                alt=""
+                class="zb-nav__sec-btn-image"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--
   <div class="zb-invite-section">
     <div class="zb-alert-content">
       <div class="zb-alert-title-section"><img src="images/invite.svg" alt="" class="zb-alert-icon">
@@ -75,191 +112,1378 @@ input[type=text] {
       <div class="zb-alert-subheading">Your friend may have sent you some funds to claim. After installing, come back here to <a href="#">accept your invitation</a><span></span>. </div>
     </div>
   </div>
-  <div class="zb-mobile-alert">
+  -->
+    <!-- <div class="zb-mobile-alert">
     <div class="zb-alert-content">
       <div class="zb-alert-title-section"><img src="images/ic_baseline-mobile-off.svg" alt="" class="zb-alert-icon">
         <h1 class="zb-alert-heading">Zbay is not available on mobile yet. </h1>
       </div>
       <div class="zb-alert-subheading">Visit this page from a desktop to download Zbay for Mac, Windows and Linux.</div>
     </div>
-  </div>
-  <div class="zb-hero-section">
-    <div class="zb-hero">
-      <div class="zb-hero__desc-cont">
-        <h1 class="zb-hero-heading">Your private inbox on the better Internet, for messages, money, and buying things.</h1>
-        <div class="zb-form-block-cta w-form">
-          <form id="email-form" name="email-form" data-name="Email Form" class="zb-cta-form"><input type="text" class="zb-enter-your-email w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your email" id="name"><input type="submit" value="Join the beta" data-wait="Please wait..." class="submit-button w-button"></form>
-          <div class="success-message w-form-done">
-            <div class="text-block">Thank you! Your submission has been received!</div>
+  </div> -->
+    <div class="zb-hero-section">
+      <div class="zb-hero">
+        <div class="zb-hero__desc-cont">
+          <div class="zb-hero__zbay-logo">
+            <img
+              src="./images/logo-lockup--circle.svg"
+              alt=""
+              class="zbay-logo"
+            />
           </div>
-          <div class="error-message w-form-fail">
-            <div class="text-block-2">Oops! Something went wrong while submitting the form.</div>
-          </div>
-        </div>
-        <a id="zb-autodetect-platform" href="#" class="zb-hero-button w-button">Download for Mac</a>
-        <div class="zb-platform-links">
-          <div class="zb-links-row"><a id="zb-first-other-target-link" href="#"></a> | <a id="zb-second-other-target-link" href="#"></a></div>
-        </div>
-        <div class="zb-warning"><img src="images/warning.svg" width="48" height="48" alt="" class="zb-warning-image">
-          <div class="zb-warning-text">⚠️ Zbay is in beta. Don't use it for storing funds or when security is critical.</div>
-        </div>
-      </div>
-      <div data-w-id="026f2572-7222-947b-ef55-337847e2fc0d" style="-webkit-transform:translate3d(0, 309PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(52DEG) skew(0, 0);-moz-transform:translate3d(0, 309PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(52DEG) skew(0, 0);-ms-transform:translate3d(0, 309PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(52DEG) skew(0, 0);transform:translate3d(0, 309PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(52DEG) skew(0, 0);opacity:0" class="zb-hero__image-container"><img src="images/macbook-with-screen.png" srcset="images/macbook-with-screen-p-500.png 500w, images/macbook-with-screen-p-1600.png 1600w, images/macbook-with-screen-p-2000.png 2000w, images/macbook-with-screen.png 2344w" sizes="(max-width: 479px) 90vw, (max-width: 767px) 84vw, (max-width: 991px) 76vw, 80vw" alt="" class="zbay-app-mockup"></div>
-    </div>
-  </div>
-  <div id="faq" class="zb-section">
-    <div class="zb-container">
-      <div class="zb-2-column-r-image w-row">
-        <div class="zb-l-column w-col w-col-4"><img src="images/messages.svg" alt="" class="column-image"></div>
-        <div class="zb-r-column w-col w-col-8">
-          <h1 class="zb-section-heading">Message privately, on-chain</h1>
-          <p class="zb-p">On Zbay, every direct message you send is end-to-end encrypted so that only the recipient can read it.<br></p>
-          <p class="zb-p">Unlike Signal &amp; WhatsApp, Zbay does not use phone numbers or “trust on first use,” so it’s more resistant to man-in-the-middle attacks.<br></p>
-          <p class="zb-p">Unlike almost any other private messaging solution, Zbay does not depend on a server <em>or</em> require you to be online to receive messages. It's peer-to-peer and it just works. Zbay even supports <a href="https://www.torproject.org/">Tor</a>.<br></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="faq" class="zb-section">
-    <div class="zb-container">
-      <div class="zb-2-column-l-image w-row">
-        <div class="zb-l-column w-col w-col-4"><img src="images/buying.svg" alt="" class="column-image"></div>
-        <div class="zb-r-column w-col w-col-8">
-          <h1 class="zb-section-heading">Buy &amp; sell</h1>
-          <p class="zb-p">You can buy and sell things on Zbay, privately, with <a href="https://z.cash">Zcash</a>.<br></p>
-          <p class="zb-p">Zbay lets you send a seller your order information (quantity, size, etc.) and your shipping address (if necessary) with funds in an encrypted message.<br></p>
-          <p class="zb-p">With Bitcoin, third parties can see who paid who, but Zcash makes this much more difficult, if not impossible, protecting your privacy. Someday Zbay will have escrow payments with dispute resolution and seller ratings. Right now, channel owners can use moderation to keep out scam sellers.<br></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="faq" class="zb-section">
-    <div class="zb-container">
-      <div class="zb-2-column-r-image w-row">
-        <div class="zb-l-column w-col w-col-4"><img src="images/group-chat.svg" alt="" class="column-image"></div>
-        <div class="zb-r-column w-col w-col-8">
-          <h1 class="zb-section-heading">Build safe communities, earn money</h1>
-          <p class="zb-p">Zbay has “channels”, group chats that can be either private or public.<br></p>
-          <p class="zb-p">Messages to a channel are encrypted, but everyone who gets the key to the channel can see them.<br></p>
-          <p class="zb-p">Public channels have owners who can moderate messages, keep their community safe from spam & abuse, set prices for advertising, and earn money if their channel thrives.<br></p>
-        </div>
-      </div>
-    </div>
-  </div>  
-  <div id="faq" class="zb-section">
-    <div class="zb-container">
-      <div class="zb-2-column-l-image w-row">
-        <div class="zb-l-column w-col w-col-4"><img src="images/hello.svg" alt="" class="column-image"></div>
-        <div class="zb-r-column w-col w-col-8">
-          <h1 class="zb-section-heading">Be yourself, make your own rules</h1>
-          <p class="zb-p">Zbay doesn't rely on central servers, and anyone can register a username or channel. (Soon, you’ll be able to register as many usernames as you want!)<br></p>
-          <p class="zb-p">Usernames and channels get engraved in the Zcash blockchain, with your cryptographic key.<br></p>
-          <p class="zb-p">This means Zbay does not control who has a Zbay account, or what you do with your account. If Zbay was ever forced to censor users, any developer could fork Zbay and remove the censorship.<br></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="faq" class="zb-section">
-    <div class="zb-container">
-      <div class="zb-2-column-r-image w-row">
-        <div class="zb-l-column w-col w-col-4"><img src="images/open-source.svg" alt="" class="column-image"></div>
-        <div class="zb-r-column w-col w-col-8">
-          <h1 data-w-id="57a5976b-66ed-76da-385d-08b82ab3d7e9" class="zb-section-heading">Don't take our word for it</h1>
-          <p class="zb-p">Zbay is free and open source software, so independent researchers will be able to verify that Zbay does what it claims.<br></p>
-          <p class="zb-p">Only you control the cryptographic keys to read your private messages.<br></p>
-          <p class="zb-p">If Zbay changes in an annoying or unethical way, any developer in the world can change Zbay’s code and publish a better version—and you could easily move your username, data, and messages to that new version.<br></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="faq" class="zb-section">
-    <div class="zb-container">
-      <div class="zb-2-column-l-image w-row">
-        <div class="zb-l-column w-col w-col-4"><img src="images/giants.svg" alt="" class="column-image"></div>
-        <div class="zb-r-column w-col w-col-8">
-          <h1 class="zb-section-heading">Powered by Zcash</h1>
-          <p class="zb-p">Zbay stands on the shoulders of giants. Instead of central servers it uses Zcash, a privacy-focused cryptocurrency with a world class team of experts in cryptography and privacy protection.<br></p>
-          <p class="zb-p">In turn, Zcash is based on Bitcoin, the oldest and most valuable cryptocurrency.<br></p>
-          <p class="zb-p">Zcash is a well-funded open source project, stewarded by both a for-profit company and a non-profit foundation committed to making it as secure, scalable, and private as possible.<br></p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div id="faq" class="zb-section">
-    <div class="zb-container">
-      <div class="zb-2-column-r-image w-row">
-        <div class="zb-l-column w-col w-col-4"><img src="images/money-bag.svg" alt="" class="column-image"></div>
-        <div class="zb-r-column w-col w-col-8">
-          <h1 class="zb-section-heading">With money built-in, you're in control</h1>
-          <p class="zb-p">Zbay uses the Zcash cryptocurrency to do everything.<br></p>
-          <p class="zb-p">Reading messages is free, but sending a message costs about 1/50th of a cent. This simple mechanism helps sustain the network without relying on, say, a giant corporation monetizing your data someday.<br></p>
-          <p class="zb-p">For now, every Zbay user gets ~100+ messages to start with, for free! We’re also working on making it extremely easy to buy Zcash, and to make all messages free in cases where they don't burden the network, for example when the recipient is online. <em>Ultimately, we hope to prove it's possible to build usable online spaces that don't compromise on privacy, freedom, or control. This is just a start, and we invite you to try it.</em><br></p>
+          <h1 class="zb-hero-heading">
+            A social marketplace for physical goods, information, and ideas.
+            <span class="zb-hero__highlight-text">Owned by no one</span>.
+          </h1>
+          <a id="zb-autodetect-platform" href="#" class="zb-hero-button w-button">Download for Mac</a>
+          <ul class="zb-hero__sec-links-list">
+            <li class="zb-hero__sec-link-item">
+              <div id="zb-first-box" class="zb-hero__sec-link-desc"></div>
+              <a id="zb-first-other-target-link" href="#" class="zb-hero__sec-link"></a>
+            </li>
+            <li class="zb-hero__sec-link-item">
+              <div id="zb-second-box" class="zb-hero__sec-link-desc"></div>
+              <a id="zb-second-other-target-link" href="#" class="zb-hero__sec-link"></a>
+            </li>
+          </ul>
+          <div class="zb-warning">
+            <img
+              src="./images/warning.svg"
+              width="48"
+              height="48"
+              alt=""
+              class="zb-warning-image"
+            />
+            <div class="zb-warning-text">
+              Zbay is in beta. Don't use it for storing funds or when security
+              is critical.
+            </div>
+          </div>
+        </div>
+        <div
+          data-w-id="026f2572-7222-947b-ef55-337847e2fc0d"
+          style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
+          class="zb-hero__image-container"
+        >
+          <img
+            src="./images/macbook-with-screen.png"
+            alt=""
+            class="zbay-app-mockup"
+          />
         </div>
       </div>
     </div>
-  </div>
-  <div class="zb-hero-section">
-    <div class="zb-hero">
-      <div class="zb-hero__desc-cont">
-        <h1 class="zb-hero-heading">It's cool. Try it.</h1>
-        <div class="zb-form-block-cta w-form">
-          <form id="email-form" name="email-form" data-name="Email Form" class="zb-cta-form"><input type="text" class="zb-enter-your-email w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="Enter your email" id="name-2"><input type="submit" value="Join the beta" data-wait="Please wait..." class="submit-button w-button"></form>
-          <div class="success-message w-form-done">
-            <div class="text-block">Thank you! Your submission has been received!</div>
-          </div>
-          <div class="error-message w-form-fail">
-            <div class="text-block-2">Oops! Something went wrong while submitting the form.</div>
-          </div>
-        </div>
-        <a id="zb-autodetect-platform-bottom" href="#" class="zb-hero-button w-button">Download for Mac</a>
-        <div class="zb-platform-links">
-          <div class="zb-links-row"><a id="zb-first-other-target-link-bottom" href="#"></a> | <a id="zb-second-other-target-link-bottom" href="#"></a></div>
-        </div>
-        <ul role="list" class="zb-hero__sec-links-list">
-          <li class="zb-hero__sec-link-item">
-            <div class="zb-hero__sec-link-desc">Windows? <a href="#" class="zb-hero__sec-link">Download Zbay for Windows</a></div>
+    <div id="why" class="zb-how-section">
+      <div class="zb-section-container">
+        <h1 class="zb-section-heading">Why we're building Zbay</h1>
+        <p class="zb-p w-clearfix">
+          <span class="zb-drop-cap">W</span>e are building Zbay because we want
+          a patch of online life that's controlled by the people of the
+          Internet. Not by one rich man in California, like Facebook is. Or by a
+          brutal dictatorship, like WeChat and TikTok are. Or by an advertising
+          company, like Youtube is.<br />
+        </p>
+
+        <p class="zb-p">
+          Making such a space is really hard to do. Who makes it? Who hosts it?
+          Who pays to keep it running? How does it remain controlled by the
+          people, and address challenges existing spaces like Twitter or
+          Facebook face, like spam or organized harassment?
+        </p>
+        <p class="zb-p">
+          Solving these problems is hard, both technically and institutionally,
+          but we must try! The alternative is a world where governments and
+          corporations control our online life and the global public sphere.
+        </p>
+        <p class="zb-p">
+          Now is the perfect moment to try, because a lot of the essential
+          groundwork is finally coming into existence. There is a rich and
+          growing stack of technical and institutional infrastructure to build
+          on:
+        </p>
+        <ul class="zb-num-list">
+          <li class="zb-num-list-item">Free software</li>
+          <li class="zb-num-list-item">Peer-to-peer applications</li>
+          <li class="zb-num-list-item">Bitcoin and its successors<br /></li>
+          <li class="zb-num-list-item">
+            Privacy-focused blockchain networks like Zcash
           </li>
-          <li class="zb-hero__sec-link-item">
-            <div class="zb-hero__sec-link-desc">Linux? <a href="#" class="zb-hero__sec-link">Download Zbay for Linux</a></div>
-          </li>
-          <li class="zb-hero__sec-link-item">
-            <div class="zb-hero__sec-link-desc">Curious why we made it? <a href="#" class="zb-hero__sec-link">Read our essay</a></div>
-          </li>
-          <li class="zb-hero__sec-link-item">
-            <div class="zb-hero__sec-link-desc"><em>How</em> private and anonymous? <a href="#" class="zb-hero__sec-link">Learn about Zcash</a></div>
+          <li class="zb-num-list-item">Anonymity tools like Tor</li>
+          <li class="zb-num-list-item">Free software governance models</li>
+          <li class="zb-num-list-item">
+            Moderation models and codes of conduct
           </li>
         </ul>
-        <div class="zb-warning"><img src="images/warning.svg" width="48" height="48" alt="" class="zb-warning-image">
-          <div class="zb-warning-text">⚠️ Zbay is in beta. Don't use it for storing funds or when security is critical.</div>
-        </div>
+        <p class="zb-p">
+          Examining each layer of this stack and how they function together
+          reveals a path forward to a new online space that—as software, as a
+          platform, and as a constellation of communities—is meaningfully
+          controlled by the people of the Internet. We believe you can build
+          communities on this stack that are more accountable, free and fair
+          than communities on existing online platforms.
+        </p>
+        <p class="zb-p">
+          It’s amazing that we’re here and this is finally possible. A lot of
+          this stuff would have been a pipe dream even a few years ago.
+        </p>
+        <h3 class="zb-h3">1. Free software gives users control over code.</h3>
+        <p class="zb-p">
+          Free software (sometimes called “open source software”) provides an
+          established, well-understood legal and social mechanism for
+          guaranteeing that people have meaningful control over the underlying
+          code of the software they use.
+        </p>
+        <p class="zb-p">
+          Free software has been around for four decades (longer depending on
+          how you count) so its track record of protecting the interests of
+          Internet users against governments and corporate monopolies is long,
+          varied and established.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          It started in the year 1980 in Cambridge, Massachusetts when, while
+          fixing a broken printer, a software engineer in the bowels of an MIT
+          computer lab had a powerful revelation: he realized that software
+          makers had legal—and technical—power to control software users, and
+          that they could use this power in nefarious ways, to extort, spy,
+          censor, or worse.<br />
+        </p>
+
+        <p class="zb-p">
+          This software engineer defined what he called the "four freedoms” to
+          rally software makers around a brighter future where software users
+          were in control, not under control. And he called software that gave
+          users these freedoms “free software.” The four freedoms were:<br />
+        </p>
+
+        <ul class="zb-num-list">
+          <li class="zb-num-list-item">
+            The freedom to run a program as you wish, for any purpose.
+          </li>
+          <li class="zb-num-list-item">
+            The freedom to understand how a program works, and change it how you
+            wish.<br />
+          </li>
+          <li class="zb-num-list-item">
+            The freedom to redistribute copies of a program, to help others.<br />
+          </li>
+          <li class="zb-num-list-item">
+            The freedom to redistribute your changes, so the wider community can
+            benefit from your work.<br />
+          </li>
+        </ul>
+        <p class="zb-p">
+          To protect and spread his vision for free software, he also created
+          the GNU GPL, an ingenious legal contract that encoded the four
+          freedoms into law. A software license, the GNU GPL gave software
+          engineers a legal, contractual way to grant users and other engineers
+          all four freedoms. It also required that any engineers who built on
+          GNU GPL-licensed code also released <em>their </em>work under a
+          similar license.
+        </p>
+        <p class="zb-p">
+          Because of this clever legal enforcement of reciprocity, the body of
+          code available under the GNU GPL grew like wildfire, making possible
+          so many major victories for both engineers and Internet users it’s
+          impossible to even name them all.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          As with most social movements, free software’s biggest victories are
+          likely invisible: dystopian futures that simply never happened. But to
+          give a short list, here are some of the big ones:<br />
+        </p>
+
+        <ul class="zb-bul-list">
+          <li class="zb-bul-list-item">
+            Apple’s operating systems in the second Steve Jobs era were built on
+            free software—at a time when it was far from certain Apple could
+            challenge Microsoft’s monopoly.
+          </li>
+          <li class="zb-bul-list-item">
+            Free software browsers and rendering engines like Firefox and Webkit
+            (used by Chrome and Safari) made the Microsoft monopoly irrelevant
+            by creating the web as a useful software platform.
+          </li>
+          <li class="zb-bul-list-item">
+            Free software let people around the world watch TV and listen to
+            music on their computers long before media monopolies would let
+            Netflix or Spotify exist in their countries.
+          </li>
+          <li class="zb-bul-list-item">
+            Android, an operating system built on free software, unseated
+            Apple’s monopoly on the smartphone and powers 2.5 billion phones and
+            tablets worldwide.
+          </li>
+          <li class="zb-bul-list-item">
+            Free software tools are so ubiquitous in modern software development
+            that young engineers take them for granted.
+          </li>
+          <li class="zb-bul-list-item">
+            Free software let Edward Snowden and journalist Laura Poitras
+            communicate privately, so they could blow the whistle on the world's
+            most powerful spy agencies, the NSA and GCHQ.
+          </li>
+        </ul>
+        <p class="zb-p">
+          With free software, any engineer can understand the code, change it,
+          and distribute a competing version. This is called <em>forking</em>.
+          You might not know how to code, but if a piece of free software is
+          popular and doing something seriously anti-user, some irate developer
+          out there will fork it for you. Free software creators know this, so
+          they usually don’t bother being anti-user in the first place.
+        </p>
+        <p class="zb-p">
+          The guarantee that you can fork code and take it in a new direction
+          creates deeper collaborative dynamics, where people who contribute
+          value to the project benefit from gaining some (but not total) control
+          over it. After all, why would your collaborators capriciously say no
+          to a good idea when they benefit from your contributions to a mutually
+          beneficial project?
+        </p>
+        <h3 class="zb-h3">
+          2. Peer-to-peer networks give users control over platforms
+        </h3>
+        <p class="zb-p">
+          Today, many modern software companies go against the interests of
+          their users. Advertising is a simple example. Given the choice, most
+          users would prefer to not be subjected to advertising at all, or at
+          least not give advertisers their data. But popular platforms like
+          Youtube, Facebook and Spotify still sell data to advertisers. If free
+          software is such a powerful guarantee, how are so many prominent
+          companies able to go against users’ interests?<br />
+        </p>
+
+        <p class="zb-p">
+          The answer is simple: once free software is being run on computers we
+          don’t control, most of its guarantees are moot, and that’s how
+          services like Facebook, Youtube, and Spotify work. Some code runs on
+          your computer or phone, but much of it runs on computers controlled by
+          these companies, which you have no control over.<br />
+        </p>
+
+        <p class="zb-p">
+          Because of the freedoms free software granted, companies can use
+          GPL-licensed code however they choose to. As long as they don’t
+          “distribute” it, they don’t have to give their users the four
+          freedoms. Selling an app counts as "distributing" software, but using
+          code to run a website (like Facebook.com or Google.com) does
+          not.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          Even worse, once Facebook and Google are running software on their
+          machines, users have no control over what code is running, even if it
+          is free software. Google might be using mostly free software to run
+          Gmail, and you might check Gmail using a free software email client or
+          web browser. But if Google decides to give the US government an easy
+          way to read your emails, how would you know? That’s happening on their
+          computer, not yours. If Facebook is doing something evil with your
+          data, that’s running on Facebook’s computer, not yours.<br />
+        </p>
+        <p class="zb-p">
+          In the above cases free software might still be making the world
+          better by making the marketplace more competitive, or by making it
+          easier to unseat a monopoly. But for free software to provide a
+          meaningful guarantee to users, users cannot depend on code running on
+          computers outside their control. All of the important code needs to be
+          running on a user’s own&nbsp; machine for free software’s guarantee to
+          function fully.<br />
+        </p>
+
+        <p class="zb-p">
+          This is why, as more and more people used software shared by millions
+          running on servers outside their control, free software had a problem.
+          The free software movement's "four freedoms" only made sense when our
+          apps ran on *our* computers. Once we stopped downloading apps and
+          running them on our computers, and started mostly using websites like
+          Facebook or Youtube, or apps dependent on company servers like
+          Spotify, free software no longer provided a meaningful check on those
+          companies’ power to control users.<br />
+        </p>
+
+        <p class="zb-p">
+          One way to build modern cloud services with free software is
+          <em>federation</em>, but doesn’t really solve the problem, as you can
+          see in the Gmail example above. Email is an example of a federated
+          protocol. There are traditional servers, which can be run by anyone,
+          from a big company like Google to a band of activists like
+          <a href="https://riseup.net/">Riseup.net</a>. And there are clients
+          that can connect to these servers, like Thunderbird, Outlook, the
+          Gmail website, or the Mail app on an iPhone. The problem with
+          federation is that you still have to trust the server, and you have no
+          idea what code it’s running or who it might be working for. Google
+          could give your emails to the government. The activists at Riseup
+          could be hacked without your—or their—knowledge by a well-funded spy
+          agency, or forced to hand over servers by a court order. Also, in
+          federated platforms with many stakeholders, progress on crucial
+          technical issues like privacy can stagnate because of difficulties in
+          coordination and aligning priorities: the state of the art in
+          end-to-end email encryption has barely made progress since the 1980s,
+          for example.<br />
+        </p>
+
+        <p class="zb-p">
+          Peer-to-peer networks built on free software, on the other hand,
+          provide a real way to address the problem of trust. In a peer-to-peer
+          network, all the important code runs (or can be run) on each
+          participant’s computer. Peer-to-peer networks must by their nature be
+          very untrusting of other participants in the network, since anyone out
+          there could change their code to do something malicious. But if the
+          network is designed to not require trust, and you’re running free
+          software code on your computer, a peer-to-peer network has extended
+          the guarantees of free software to the platform itself. Users can come
+          together in the network knowing that they have meaningful control over
+          what happens.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          Peer-to-peer networks also push down the cost of forking, ensuring
+          that the free software guarantee has teeth. Unlike services that
+          depend on large clusters of servers, peer-to-peer networks have
+          operating costs that are zero or near-zero, so forking a platform
+          becomes much easier. If you had the source code to Facebook, but it
+          required you to spend millions each day and assemble a massive team of
+          specialists to keep it online, the code itself would not be very
+          useful, and its availability would not provide a meaningful guarantee
+          to users. However, because peer-to-peer networks emerge like hives
+          from the code running on users’ machines, they are much easier
+          platforms to fork, and the guarantee continues to be meaningful.<br />
+        </p>
+
+        <h3 class="zb-h3">
+          3. Bitcoin showed how to do *much* more with peer-to-peer networks,
+          and lowered the cost of forking even further.
+        </h3>
+        <p class="zb-p">
+          Having to not trust anyone else introduces some real limitations for
+          peer-to-peer networks. In the first era of peer-to-peer applications,
+          software like Limewire and Bittorrent created massive libraries of
+          files and delivered them super fast, but you still needed a
+          conventional website to find what you were looking for, or at least to
+          filter out the junk. Even something as simple as a reliable system for
+          ratings and moderation was really hard in a peer-to-peer
+          context.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          Unlike with desktop apps like web browsers or video players, creating
+          a free software competitor to something like Facebook or Youtube is a
+          much trickier proposition. These applications have to connect—and
+          balance the interests of—many different users. If software runs on
+          each user’s computer, how does code balance their interests in
+          privacy, safety, control, and freedom?&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          To build a true online space like Facebook, Twitter or reddit with the
+          pro-user guarantees of free software, we needed a way to build free
+          software that everyone can modify, that runs on our own computers, not
+          the servers of a large business, but that balances everyone’s
+          interests in a way people can actually trust to work as
+          advertised.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          That is extremely hard to achieve. It’s a paradox. If everyone runs
+          the software on their own computers, and it's free software, what
+          stops malicious users from modifying the software to do something
+          malicious?&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          This paradox was the subject of a lot of research through the 90s and
+          early 2000s. But researchers never really got it working. Sure, there
+          were “federated” protocols like email or XMPP, but they depended on
+          servers outside the user’s control, and these servers were often
+          controlled by a large company, like Google, or if they were
+          independently run, couldn’t be credibly considered more secure than
+          the centralized servers of a large corporation with a massive security
+          team.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          Then, in 2008, something special happened. Someone, it seemed, had
+          come out of the woodwork with an answer to the paradox, and the answer
+          came not just as an academic paper, but as a working app you could
+          actually use. The “person” was Satoshi Nakamoto, though that's
+          definitely not his real name, and “he” might not actually have ever
+          existed. The project was called Bitcoin.<br />
+        </p>
+
+        <p class="zb-p">
+          You've probably heard of Bitcoin, and you probably have tons of ideas
+          about it. Like any popular phenomenon, Bitcoin has been politicized
+          and its reputation precedes it. Maybe you got rich off Bitcoin. Maybe
+          you lost half your life savings to it. Maybe it's the answer to the
+          tyranny of big banks. Maybe it's a ponzi scheme or a “late-capitalism”
+          acid trip from Burning Man.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          Bitcoin’s reputation matters much less than this fact: it was the
+          first to crack the paradox. Bitcoin was free software, and it was a
+          peer-to-peer application, but it created a single agreed-upon set of
+          data, known as a blockchain, that everyone could trust was correct.
+          Bitcoin’s successor Ethereum took the idea even further and created a
+          general platform for computation, albeit a very slow one—an almost
+          magical feat.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          Blockchains let you fork entire platforms and take the data with you.
+          You can make a new version of the Bitcoin app that uses data on the
+          same blockchain but has some new or different functionality. Or you
+          can fork the blockchain code itself and give birth to a new
+          blockchain, letting users carry over their accounts. You can even
+          reference data on one blockchain from another. This isn’t always easy
+          to do, but it’s possible and often straightforward—certainly much more
+          straightforward than trying to convince Facebook to let you use their
+          data to build a Facebook competitor!<br />
+        </p>
+
+        <p class="zb-p">
+          Free software gave users meaningful control over code. Peer-to-peer
+          networks extended this control to the platform level, but with severe
+          limitations. But Bitcoin and successors like Ethereum blew the doors
+          off what kinds of applications you could practically build with a
+          peer-to-peer network, and opened up the possibility for forking entire
+          platforms while retaining useful data. They let us extend the
+          guarantee granted by free software even farther.<br />
+        </p>
+
+        <h3 class="zb-h3">
+          4. ZK-SNARKs and Zcash let peer-to-peer platforms keep secrets
+        </h3>
+        <p class="zb-p">
+          Bitcoin had a big missing piece: it didn’t address privacy.
+          Theoretically, anything you did with Bitcoin was visible to everyone
+          in the world; they just might not know it was you. But to make a
+          functioning online community with things like direct messages, or an
+          ecommerce platform where people provide sellers their shipping
+          address, you need to be able to keep some things private.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          Zcash is a Bitcoin successor with an emphasis on privacy. It lets you
+          send transactions without revealing what they are or who they’re going
+          to. It also includes a way to attach encrypted messages to
+          transactions. If you want to build something more like Facebook,
+          Twitter, or reddit on top of a blockchain, these features make Zcash a
+          plausible (if clunky) place to start.<br />
+        </p>
+
+        <p class="zb-p">
+          Zbay is built on the Zcash network. Where Facebook’s apps connect to
+          Facebook's servers, Zbay connects to the Zcash network. Where most
+          emails go through servers controlled by Google or Microsoft, Zbay’s
+          messages go through the Zcash network. The Zcash network itself is
+          made up of people running Zcash nodes on computers they control. Users
+          don’t need to trust other Zcash node operators either, because the
+          network’s design constrains their behavior.<br />
+        </p>
+
+        <p class="zb-p">
+          We chose Zcash as a network for Zbay for a few reasons:<br />
+        </p>
+        <ul class="zb-num-list">
+          <li class="zb-num-list-item">
+            It is one of the few networks that lets us send messages privately.
+          </li>
+          <li class="zb-num-list-item">
+            It aims to offer strong anonymity to message recipients and,
+            eventually, message senders.
+          </li>
+          <li class="zb-num-list-item">
+            It protects metadata, that is, the record of who is speaking to
+            who.<br />
+          </li>
+          <li class="zb-num-list-item">
+            Beginners can buy Zcash quickly and easily on established sites like
+            Coinbase.<br />
+          </li>
+          <li class="zb-num-list-item">
+            Its founders are pioneers in building technology for online
+            privacy.<br />
+          </li>
+          <li class="zb-num-list-item">
+            It aims to scale to billions of users and has a credible (if
+            uncertain) path to doing so.<br />
+          </li>
+        </ul>
+        <p class="zb-p">
+          By building on Zcash, we can trust leading privacy-tech pioneers to
+          protect users’ privacy, keep them secure, and scale to billions of
+          users, while we focus on building a fun app that’s easy to use and
+          good for building online community.<br />
+        </p>
+
+        <h3 class="zb-h3">
+          5. Tor protects IP addresses (and location) of users in a peer-to-peer
+          platform.
+        </h3>
+        <p class="zb-p">
+          In a peer-to-peer network like Bittorrent, Bitcoin, or even Zcash, you
+          connect to many users you don’t know or trust directly from your own
+          IP address, revealing it to them.<br />
+        </p>
+
+        <p class="zb-p">
+          Knowing your IP address could give other users information about you
+          that you’d rather not share: your employer if you’re accessing the
+          network from work, your school if you’re accessing it from a campus,
+          or a rough guess at your city or town if you’re accessing it from
+          home.
+        </p>
+        <p class="zb-p">
+          In this way, a peer-to-peer network can be <em>less</em> private than
+          a centralized platform like Google or Facebook, where the IP address
+          you connect from may be known to the services themselves, some
+          intermediaries, and assorted spy agencies, but not in most cases to
+          the users you’re communicating with.<br />
+        </p>
+
+        <p class="zb-p">
+          If we’re building a peer-to-peer network that people are going to use
+          as an online space, we should offer at least the same level of
+          protection of IP address information that Facebook and Google offer.
+          Tor, a technology developed for protecting activists and journalists
+          from repressive regimes, gives us one way to do that.<br />
+        </p>
+
+        <p class="zb-p">
+          Tor isn’t foolproof, its efficacy when used to connect to networks
+          like Bitcoin or Zcash is still the subject of research, and Tor might
+          actually make these networks
+          <a href="https://arxiv.org/abs/1410.6079">less secure</a> in some
+          ways. But it restores the privacy protections for your IP address when
+          you use a peer-to-peer platform instead of a centralized one, so we
+          think it’s an important part of the stack, at least until the Zcash
+          team addresses this privacy problem directly.<br />
+        </p>
+
+        <h3 class="zb-h3">
+          6. Free software has established models for governance.
+        </h3>
+        <p class="zb-p">
+          The ability to fork a free software project and build in a new
+          direction is a powerful guarantee that over time the software will
+          serve its users, but if a free software project is governed in a way
+          that is responsive to its users’ and developers’ needs, forking might
+          never be necessary. Zbay will strive to find a governance model that
+          can align our interests with users, minimizing the necessity of
+          forking.
+        </p>
+        <p class="zb-p">
+          Some free software projects are run by a conventional business. Others
+          are run by foundations like the
+          <a href="https://foundation.mozilla.org/">Mozilla Foundation</a>, the
+          nonprofit organization behind the Firefox browser, or the
+          <a href="https://www.torproject.org/">Tor Project</a>, the nonprofit
+          organization that makes the privacy and anonymity tool Tor. Others,
+          including many of the basic building blocks of the Internet itself,
+          are run through rough consensus of volunteers and paid professionals
+          spanning dozens of organizations and companies.<br />
+        </p>
+
+        <p class="zb-p">
+          There are lots of models that make sense and huge troves of experience
+          to draw from in deciding how to govern Zbay. Right now, Zbay is still
+          just an experiment, so settling on a governance model would be putting
+          the cart before the horse, especially given that—if we failed to find
+          a good one—forking would always be an option. Nonprofit foundations
+          are difficult enough to start and maintain that they aren’t the best
+          default starting point for a small free software project. But we do
+          have experience starting and operating them (we participated in
+          founding
+          <a href="https://www.fightforthefuture.org/">fightforthefuture.org</a>
+          and <a href="https://pculture.org/">pculture.org</a>) if that seems
+          like the best path forward.<br />
+        </p>
+
+        <p class="zb-p">
+          There are new structures emerging each year. A
+          <a href="https://en.wikipedia.org/wiki/B_Corporation_(certification)"
+            >B Corporation</a
+          >
+          is newer kind of entity that combines the structure of a conventional
+          corporation with the declared public interest mission of a nonprofit.
+          A
+          <a href="https://en.wikipedia.org/wiki/Decentralized_application"
+            >DApp</a
+          >
+          is a piece of autonomous software that can elect decision-makers,
+          approve or reject major proposals, or possibly even approve or reject
+          proposed code changes based on a voting algorithm. Peer-to-peer
+          networks governed by peer-to-peer networks. Yikes!<br />
+        </p>
+
+        <p class="zb-p">
+          Finally, the network that Zbay uses, Zcash, has its own structures for
+          governance. If you like, you can read more about Zcash’s own
+          <a href="https://www.zfnd.org/governance/">governance structure</a
+          >—the people behind Zcash are putting a ton of thought and work into
+          this.<br />
+        </p>
+
+        <h3 class="zb-h3">7. Moderation models and codes of conduct</h3>
+        <p class="zb-p">
+          Online spaces aren’t just about how they’re built; the culture and
+          community that develop on them are the final piece that matters more
+          than anything. With Zbay, we believe that we can stand against
+          censorship while still building online communities that are safe,
+          respectful, and accountable to the values of diverse communities.<br />
+        </p>
+
+        <p class="zb-p">
+          Zbay will soon include established systems for moderation, where
+          channel owners can hide posts, ignore problem users, or delegate these
+          powers to moderators. Channel owners will have the power they need to
+          create functioning online communities built on respect for clear
+          principles. Zbay will encourage channel owners to post clear codes of
+          conduct that moderators will enforce consistently, and we plan to
+          recommend model codes of conduct.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          That said, channel owners have complete freedom to decide the rules
+          for their channel, and the fact that Zbay is a free software,
+          peer-to-peer, blockchain-based platform guarantees they always will.
+          First, the Zcash blockchain is designed for censorship resistance. You
+          can't simply delete transactions or messages. When channel owners
+          “hide” a message on Zbay, they are sending a new message which tells
+          the Zbay app to ignore it. The hidden message is still there, and
+          users could modify their Zbay app to display it. If the Zbay team
+          added censorship code, an anti-censorship fork could remove it, and no
+          human expression would be lost.&nbsp;<br />
+        </p>
+
+        <p class="zb-p">
+          Unlike platforms like Twitter, Facebook, and reddit, users won’t be
+          bombarded by an algorithm serving messages from communities users did
+          not choose to participate in. Zbay users are not subject to the
+          content of Zbay channels unwillingly: they must actively join them and
+          can leave at any time.<br />
+        </p>
+
+        <p class="zb-p">
+          The Zbay team believes that it is morally wrong—and harmful to any
+          conceivable notion of political progress—to censor channel owners. Any
+          destructive conversation is certain to be outweighed by a larger,
+          countervailing, constructive response. The response could come in that
+          conversation itself or in other conversations on Zbay, elsewhere on
+          the Internet, or years down the road—but it will come: the arc of the
+          moral universe is long, but it bends toward justice. Our commitment to
+          this idea is unshakeable, and thanks to the technology we’re building
+          on, you don’t even need to take our word for it.<br />
+        </p>
+
+        <h3 class="zb-h3">Fitting it all together</h3>
+        <p class="zb-p">
+          If our goal is to make a patch of online life that’s controlled by the
+          people of the Internet, not by big companies or repressive
+          governments, we can fit these pieces together to achieve that in Zbay.
+        </p>
+        <p class="zb-p">
+          Zbay exists as free software available under the GNU GPL. Even if the
+          organization and team we’ve created to make Zbay disappears, others
+          will be able to take the code and continue. Any developer in the world
+          can make improvements to Zbay, and if the Zbay team doesn’t accept
+          these improvements, that developer can create their own alternative.
+          This guarantees that the people of the Internet will control Zbay’s
+          underlying code.
+        </p>
+        <p class="zb-p">
+          Zbay is peer-to-peer, so Zbay as a platform emerges hive-like when
+          many users run the code of the Zbay app. If the code survives, the
+          platform survives as well. If developers with a new and better vision
+          want to fork the code, they can fork the platform as well. Thanks to
+          Zbay being a peer-to-peer network, the control users enjoy over code
+          also gives them meaningful control over the platform.
+        </p>
+        <p class="zb-p">
+          Because Zbay uses a blockchain, it can do some special things that
+          used to not be possible in peer-to-peer networks, like registering
+          unique usernames or channel names, sending money, and buying or
+          selling things. This also lets Zbay use small fees to increase the
+          cost of being a bad actor—for example by registering millions of fake
+          accounts, sending spam, or scamming other users. Using a blockchain
+          network guarantees that competing projects will be able to take
+          essential data (like channels, users, and their messages) with them
+          when they fork, without needing permission from the team behind
+          Zbay&mdash;in stark contrast to centralized services like Facebook,
+          where big companies use control over data to lock users and developers
+          into the network.
+        </p>
+        <p class="zb-p">
+          Zbay uses the cutting-edge, privacy-focused blockchain Zcash, so it
+          can offer basic privacy protections like end-to-end encryption for
+          direct messages and group chats. It can even protect “metadata,”
+          knowledge of who is speaking with whom. Zbay also uses Tor (optionally
+          right now) to protect users’ IP address from becoming public,
+          restoring a basic privacy protection offered by centralized services.
+          Unlike a centralized service like Facebook, where privacy guarantees
+          are based just on what Facebook <em>says</em> it will do, and
+          potentially undermined by laws that require it to collaborate with
+          governments in secret, the privacy guarantees in Zbay are based in
+          encryption, free software, and peer-to-peer networks which can
+          (someday) be studied by researchers and verified to be secure against
+          all known attacks.
+        </p>
+        <p class="zb-p">
+          Zbay has a deep trove of free software governance models to choose
+          from, as well as new kinds of entities like the
+          <a href="https://en.wikipedia.org/wiki/B_Corporation_(certification)"
+            >B Corporation</a
+          >
+          or the
+          <a href="https://en.wikipedia.org/wiki/Decentralized_application"
+            >DApp</a
+          >. The Zcash network on which Zbay is built has a thoughtful and
+          evolving governance model. The low cost of forking a free software,
+          peer-to-peer, blockchain-based platform creates a baseline guarantee
+          that the platform will serve users’ interests. But a good governance
+          model can do even better: it can actively solicit and respond to user
+          and developer feedback and make smart plans for the future.
+        </p>
+        <h3 class="zb-h3">What are we waiting for?</h3>
+        <p class="zb-p">
+          Like many eager observers of the blockchain / cryptocurrency space,
+          we’ve felt an enormous pent-up desire for products to come along that
+          actually matter to all of us. We saw the first peer-to-peer platforms
+          emerge in the early 2000s. We saw Bitcoin and Ethereum emerge years
+          later. We watched as a breathtaking amount of investment flowed into
+          moonshot-like infrastructure projects to build this new stack for
+          decentralized, peer-to-peer, free software applications.
+        </p>
+        <p class="zb-p">
+          Still, we’ve felt some pent-up frustration that all this investment
+          and passion has produced so few useful tools for our daily lives. When
+          do us Internet users get fun products that we can download, play with,
+          and use with our friends to build online spaces where people are
+          secure and free?
+        </p>
+        <p class="zb-p">
+          When we saw the announcement of the encrypted memo field in Zcash, we
+          got excited. For the first time a blockchain stack was natively
+          supporting enough protections for user privacy to build something
+          really useful beyond finance. We thought, “why wait for somebody else
+          to build our dream?” We decided to go for it, and build one of the
+          free software, peer-to-peer dream apps we’d always wished would
+          exist—something out of a Thomas Pynchon novel: a W.A.S.T.E, or a
+          DeepArcher.
+        </p>
+        <p class="zb-p">
+          We decided to take the best big step we could in the direction of a
+          world where our online life is controlled by the people of the
+          Internet. We built Zbay.
+        </p>
       </div>
     </div>
-  </div>
-  <div class="zb-footer">
-    <div class="zb-footer__logo-container"><a href="old-home.html" class="zb-footer__logo-link-block w-inline-block"><img src="images/logo-lockup--circle--watermark.svg" alt="" class="zb-footer__logo"></a></div>
-    <ul role="list" class="zb-footer__pri-btns-list">
-      <li class="zb-footer__pri-btn-item">
-        <a href="how.html" class="zb-footer__pri-btn w-inline-block">
-          <div class="zb-footer__pri-btn-text">How it works</div>
-        </a>
-        <a href="why.html" class="zb-footer__pri-btn w-inline-block">
-          <div class="zb-footer__pri-btn-text">Why?</div>
-        </a>
-        <a href="faq.html" class="zb-footer__pri-btn w-inline-block">
-          <div class="zb-footer__pri-btn-text">FAQ</div>
-        </a>
-      </li>
-    </ul>
-    <ul role="list" class="zb-footer__sec-btns-list">
-      <li class="zb-footer__sec-btn-item"><a href="https://twitter.com/zbayapp" class="zb-footer__sec-btn w-inline-block"><img src="images/twitter--white.svg" alt="" class="zb-footer__sec-btn-image"></a></li>
-      <li class="zb-footer__sec-btn-item"><a href="https://github.com/ZbayApp/zbay" class="zb-footer__sec-btn w-inline-block"><img src="images/github--white.svg" alt="" class="zb-footer__sec-btn-image"></a></li>
-    </ul>
-    <div class="zb-footer__copyright-text">© Copyright Zbay 2020</div>
-  </div>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5eda64bd77a8dc6e05ed8a12" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
-  <script src="js/browserDetectionScript.js" type="text/javascript"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-</body>
+    <div id="how" class="zb-essay-section">
+      <div class="zb-section-container">
+        <h2
+          data-w-id="2bf1c4bc-d4f2-8c4a-1195-281e50e43eba"
+          class="zb-section-heading"
+        >
+          How Zbay works
+        </h2>
+        <p class="zb-p w-clearfix">
+          <span class="zb-drop-cap">Z</span>bay is a Mac, Windows, and GNU/Linux
+          desktop app that uses encrypted memos sent over the Zcash network to
+          build an experience like Slack, Telegram, or Facebook Marketplace. You
+          can register a username, message other users, join channels (group
+          chats), offer items for sale, and buy things—all over the Zcash
+          network. There’s no central server.
+        </p>
+        <h3 class="zb-h3">
+          Zbay uses Zcash shielded transactions and encrypted memos for
+          everything
+        </h3>
+        <p class="zb-p">
+          What makes Zcash different from Bitcoin or Ethereum is that it has
+          shielded transactions. Shielded transactions can include tiny
+          encrypted memos, which only the recipient can see. The cost per
+          message is very low: penny can send more than a hundred messages. (So
+          we automatically send every Zbay user a small amount of the Zcash
+          currency, ZEC, to get them started.)
+        </p>
+        <p class="zb-p">
+          An encrypted memo allows a maximum of just 512 characters, but Zbay
+          squeezes a lot of interesting stuff into it. If you message another
+          user, we send a transaction with a tiny amount of ZEC and an encrypted
+          memo containing the contents of your message and your signature.
+          (Zcash includes no information about the sender of a message, so we
+          have to include your signature so that the recipient will know it's
+          you!)
+        </p>
+        <p class="zb-p">
+          If you message a group of users, we send the exact same kind of
+          message to one address, but everyone in the group has the key to read
+          messages sent to that address. That's what lets you into the group:
+          knowing the address to send to and having the key to read all the
+          messages sent there. Zcash has separate keys for viewing and spending,
+          so just because you can read messages doesn't mean you can spend money
+          sent to the channel—only the user can do that. Unfortunately, there is
+          no way to know who has joined the group, or to remove someone from the
+          group. Access control for channels is very crude for now, but it works
+          and is a starting point.<br />
+        </p>
+
+        <h3 class="zb-h3">
+          Zbay has secure, human-readable usernames and channels
+        </h3>
+        <p class="zb-p">
+          Since Zbay can send encrypted messages to other addresses, share
+          access to these addresses, and use the contents of these messages
+          however it likes, it can offer familiar experiences like having a
+          username and being able to message people with usernames, without
+          smart contracts. The data live in the blockchain, but the smarts, for
+          now, live in the Zbay app.
+        </p>
+        <p class="zb-p">
+          If you register a username, we send a message to an address that
+          <em>everyone</em> has the viewing key for. The message says "I hereby
+          register the username @alice, this is my address, and this is my
+          public key." And it's sent to a special address that's hardcoded into
+          the Zbay app. (Soon you will be able to register multiple usernames
+          and switch between them, but right now you can only have one.)<br />
+        </p>
+
+        <p class="zb-p">
+          We do the same thing when you make a channel public. ("I hereby
+          register the channel #bears, this is its address, and this is its
+          viewing key.") The Zbay app can see all the channel registration
+          messages sent to this address and give users a nice searchable list,
+          or make the channel #bears a clickable link if someone mentions it in
+          a message.<br />
+        </p>
+
+        <h3 class="zb-h3">Zbay has moderation</h3>
+        <p class="zb-p">
+          Anyone can send a message to any address they know about, but Zbay can
+          decide which messages it displays and which it ignores, and you can
+          control this. If someone starts spamming you, you can block them and
+          Zbay will recieve their messages but hide them from you. If spam
+          becomes a problem we might start charging people more money to create
+          accounts, or charging them to send a first message to someone else.
+          (Each user could register the minimum spend to contact them for the
+          first time.)<br />
+        </p>
+
+        <p class="zb-p">
+          Channel owners can moderate by sending special messages to a channel
+          that tell the Zbay app to ignore a specific message or a problem user.
+          Of course, if channel participants don't like this they can always
+          move to another channel, so channel owners must tread carefully in how
+          they conduct moderation.<br />
+        </p>
+
+        <p class="zb-p">
+          Users can even offer items for sale. An offer is a normal message with
+          some special information that Zbay parses to show an ad-like blurb in
+          the channel. Users can message the seller with questions, buy the
+          product, and even include their shipping information in a convenient
+          way. All of this is sent directly to the seller in an encrypted
+          message. Someday, channel owners will be able to set a minimum price
+          for posting an offer to a channel.<br />
+        </p>
+
+        <h3 class="zb-h3">
+          Zbay uses encryption, not deletion, to protect privacy
+        </h3>
+        <p class="zb-p">
+          Messages never get deleted, but deletion may be overrated, or at least
+          much more difficult in practice than it seems. According to the
+          Snowden leaks, America’s NSA is saving a permanent copy of all
+          messages that travel across the Internet. Other countries likely are
+          too. In purely technical terms, when you delete something, whether on
+          a centralized service like Facebook or even on your own computer, it’s
+          hard to be sure it was deleted. Some peer-to-peer networks make
+          deletion of messages the norm, but on a peer-to-peer network any
+          participant with a modified app—from the NSA to a sleazy data
+          collection business—can save every message they see, forever. As
+          Edward Snowden explains in his book
+          <a
+            href="https://www.goodreads.com/book/show/46223297-permanent-record"
+            >Permanent Record</a
+          >, the best way to keep things private is to encrypt information and
+          control the keys, not to rely on deletion.<br />
+        </p>
+
+        <h3 class="zb-h3">
+          Zbay can be used with Tor or VPNs for greater anonymity
+        </h3>
+        <p class="zb-p">
+          Finally, there's an important caveat when it comes to anonymity: even
+          though information about the sender of a message is hidden from folks
+          viewing the blockchain, peers on the Zcash network can see the IP
+          addresses of other peers as they post transactions. An attacker could
+          join the network with a lot of peers and then associate transactions
+          (like messages registering a username) to an IP address. This isn't
+          especially expensive. So it could be a good idea to use Zbay over a
+          VPN, Tor, or both if you want increased anonymity, though you should
+          understand the limits of those approaches and the risks too!<br />
+        </p>
+      </div>
+    </div>
+
+    <div id="faq" class="zb-faq-section">
+      <div class="zb-faq">
+        <h1
+          data-w-id="57a5976b-66ed-76da-385d-08b82ab3d7e9"
+          class="zb-section-heading"
+        >
+          FAQ
+        </h1>
+        <ul class="zb-faq__faq-list">
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">
+              Should I trust Zbay to protect me against [insert specific
+              adversary here]?
+            </h2>
+            <p class="zb-faq__p">
+              No. Zbay, and Zcash, are experimental technologies. More
+              generally, given the state of computer security, you should avoid
+              using electronic means to communicate anything that could cause
+              unacceptable harm to you if discovered.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">Are direct messages private?</h2>
+            <p class="zb-faq__p">
+              Direct messages you send to another user should be as private as
+              any Zcash encrypted memo. You can learn more about Zcash encrypted
+              memos
+              <a href="https://electriccoin.co/blog/encrypted-memo-field/"
+                >here</a
+              >.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">Are channels private?</h2>
+            <p class="zb-faq__p">
+              Messages sent to a channel are as private as Zcash
+              <a href="https://electriccoin.co/blog/encrypted-memo-field/"
+                >encrypted memos</a
+              >
+              and the viewing key to that channel. Like a Bitcoin address or a
+              Google Doc set to “anyone with the link”, the key provides full
+              access. Unlike a Google Doc, messages on a Zcash channel can’t be
+              deleted, so anyone with access, or anyone who controls a medium
+              the key passes through, could potentially access all messages sent
+              to that channel forever.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">Will messages be private forever?</h2>
+            <p class="zb-faq__p">
+              No. In channels with large numbers of people, it’s likely that one
+              of the participants will eventually leak the key or messages
+              themselves, to some other medium. Even if the key is kept secure,
+              it’s likely that the discovery of bugs or advancements in
+              cryptography (e.g. quantum cryptography) will make all or some
+              Zbay messages public at some point in the future. That said, in an
+              age where intelligence agencies and companies routinely scoop up
+              data and store it forever, this is true for most encrypted
+              communication.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">Can messages be deleted?</h2>
+            <p class="zb-faq__p">
+              No. If you delete your account, you will lose access to your
+              messages. But your messages will still be accessible to
+              recipients.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">Is it anonymous?</h2>
+            <p class="zb-faq__p">
+              If someone has your Zcash address or username, you can receive
+              messages and funds from them without revealing your IP address or
+              identity, if Zcash’s anonymity claims are correct. (Note that your
+              IP address would be visible as a Zcash or perhaps Zbay user, and
+              there may not be many of those.) On the other hand, replying,
+              sending messages, registering an account, or creating a public
+              channel could reveal your IP address to an attacker who was
+              actively monitoring the Zcash network at that moment.
+            </p>
+            <p class="zb-faq__p">
+              Our hope is that the Zcash team will address sender anonymity in
+              the future, and tools like VPNs or Tor may provide additional
+              anonymity protection in the meantime.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">
+              Can third parties see who I’m talking to?
+            </h2>
+            <p class="zb-faq__p">
+              Zbay messages use Zcash shielded transactions, so sender and
+              recipient metadata is encrypted. You can learn more about shielded
+              transactions <a href="https://z.cash/technology/">here</a>.
+            </p>
+            <p class="zb-faq__p">
+              However, there may be methods to guess who is talking to who (e.g.
+              based on the timing of messages) or through other attacks.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">Can I use Tor with Zbay?</h2>
+            <p class="zb-faq__p">
+              Yes, Zbay includes basic Tor support, which lets you instruct the
+              Zcash node to connect through Tor. However, there are important
+              <a
+                href="https://zcash.readthedocs.io/en/latest/rtd_pages/tor.html"
+                >important warnings</a
+              >
+              about Tor support in Zcash. To use Tor,
+              <a href="https://www.torproject.org/download/"
+                >install Tor Browser</a
+              >, run it, select the “Connect through Tor” option on startup, and
+              make sure the proxy URL is correct.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">Can I earn money with Zbay?</h2>
+            <p class="zb-faq__p">
+              Yes! You can earn money by sharing Zbay with friends. It works
+              like an affiliate code. You can send them a small amount of money
+              (say, $1 if you like) to encourage them to install Zbay, including
+              your address in the invitation link to receive a small percentage
+              of what they spend, at least until they update their donation
+              settings. (You could even send the link to a large audience,
+              offering a larger sum of money as a prize. The first person to
+              import the link would win the prize, and you would receive a share
+              of whatever funds all users who accepted the invitation spend on
+              Zbay.)
+            </p>
+            <p class="zb-faq__p">
+              You can earn money by starting a channel. Channel owners receive
+              small amounts of money when messages are sent to a channel, and
+              they can set the minimum spend required for a message to be
+              visible. This can help reduce spam, but it can also earn revenue
+              for the channel, to support the work of moderation, for example.
+            </p>
+            <p class="zb-faq__p">
+              Finally, you can advertise and sell physical or digital goods on
+              Zbay, too. The market is likely to be very small at first. But if
+              you’d like to pioneer a new kind of platform, try it out. Because
+              Zbay doesn’t have a built-in ratings system (yet) we recommend
+              focusing on building a reputation with a small group of people as
+              a trusted seller and working up from there.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">Do Zbay channels have moderation?</h2>
+            <p class="zb-faq__p">
+              Yes. The channel owner can appoint moderators, and moderators can
+              hide posts, hide all posts by a certain user, ban messages to the
+              channel from unregistered users, and set a minimum spend to
+              message the channel.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">Can moderators delete messages?</h2>
+            <p class="zb-faq__p">
+              No, they can only instruct the Zbay app to hide them from users.
+              Messages cannot be deleted.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">
+              If another Zbay user scams me, do I have any recourse?<br />
+            </h2>
+            <p class="zb-faq__p">
+              Probably not, in the sense of recovering your funds. However, you
+              can post about the scam in Zbay channels and on any relevant
+              subreddits, to warn other potential victims. Channel moderators
+              could potentially block the scam seller, also. We hope to have
+              build a ratings system of some kind.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">
+              Can I post images or other files in Zbay?<br />
+            </h2>
+            <p class="zb-faq__p">
+              Not at this time, though you may be able to post very small images
+              or files in the future.
+            </p>
+          </li>
+          <li id="node-info" class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">
+              What does the information in the "node status" section mean?<br />
+            </h2>
+            <p class="zb-faq__p">
+              Network - This confirms that you're connected to the Zcash mainnet&mdash;where you will send and receive real Zcash&mdash;as opposed to the Zcash testnet.
+            </p>
+            <p class="zb-faq__p">
+              Blocks - Zcash transactions are stored in blocks. Here you see how many blocks Zbay has synced so far, and the total number of blocks available, from Zbay's perspective.
+            </p>
+            <p class="zb-faq__p">
+              Connections - This is the number of other Zcash nodes you are connected to. Typically you will connect to 8 nodes.
+            </p>
+            <p class="zb-faq__p">
+              UTXO - This is the number of unspent outputs. We show this number here because running out of UTXOs will temporarily block you from sending messages, even if you have funds. (This should almost never happen, especially after you've been using Zbay for a bit.)
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">
+              What is Zbay’s carbon footprint? Will it destroy the planet?<br />
+            </h2>
+            <p class="zb-faq__p">
+              An October 2019
+              <a
+                href="https://forum.zcashcommunity.com/t/dev-fund-proposal-carbon-offsetting/34834/6"
+                >estimate</a
+              >
+              of the Zcash network’s carbon footprint estimated that it used the
+              equivalent of 7.09 American households per year. So at the moment
+              it will not destroy the planet, no!
+            </p>
+            <p class="zb-faq__p">
+              This footprint could grow in the future if the price of Zcash
+              increases. It could also decrease as the Zcash network becomes
+              more efficient by introducing things like proof of stake, as
+              renewables become cheaper or more prevalent in China (where most
+              cryptocurrency mining happens), as carbon taxes spread in
+              prevalence, or due to other factors.
+            </p>
+            <p class="zb-faq__p">
+              According to the same estimate above, offsetting the carbon
+              emissions of the Zcash network would cost $5,000/year, which is
+              pretty manageable.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">
+              How many people will be able to use Zbay?<br />
+            </h2>
+            <p class="zb-faq__p">
+              Right now, not that many! The Zcash network can process about 6
+              “transactions” per second. Zbay can potentially fit a few short
+              messages into a single transaction, so let’s say it can handle 10
+              messages per second. If Zbay quickly grows in popularity, it could
+              become less reliable or even unusable.
+            </p>
+            <p class="zb-faq__p">
+              There are many ways Zbay could put less of a burden on the Zcash
+              network. Meanwhile, the Zcash team seems intent on making the
+              Zcash network scale to billions of users, and has a credible path
+              towards doing so. So it could be that, by the time Zbay becomes
+              popular, the Zcash network is no longer a bottleneck.
+            </p>
+          </li>
+          <li class="zb-faq__faq-item">
+            <h2 class="zb-faq__question">
+              What if someone uses Zbay to do something awful?<br />
+            </h2>
+            <p class="zb-faq__p">
+              (TL;DR: Even if Zbay pursues state-of-the-art approaches to
+              protect users’ privacy, which it has a moral obligation to do,
+              that will not stop well-resourced law-enforcement institutions
+              from subverting or working around these protections to enforce the
+              law, which is as it should be. In short, we take the same position
+              that Apple has taken in their design of the iPhone.)
+            </p>
+            <p class="zb-faq__p">
+              This question is important and deserves a complete answer, so this
+              section is itself a mini-essay on the state of technology,
+              democracy, and power.&nbsp;<br />
+            </p>
+
+            <p class="zb-faq__p">
+              First, unlike with centralized services, all of the basic data
+              necessary to hold lawbreaking users and channel owners accountable
+              will be equally available to everyone on the Internet. If anyone
+              is considering using Zbay to break the law, this fact should give
+              them pause. While Zbay seeks to protect the privacy of its users,
+              the current state of cybersecurity is such that it is always
+              possible, even against the most advanced privacy and anonymity
+              tools, to identify and disrupt those seen as bad actors, given
+              sufficient resources. Unlike with cloud platforms like Facebook,
+              agencies and researchers will not need special privileges to
+              access the data they need; it will all be in the open to everyone,
+              to the extent it is to anyone.<br />
+            </p>
+
+            <p class="zb-faq__p">
+              Perhaps the best example of how technology can be as secure and
+              private as possible while still leaving room for law enforcement
+              is the iPhone. Apple provides the best encryption they can for
+              every iPhone, to protect their customers’ photos, messages, and
+              online accounts if a phone is lost or stolen. When, to investigate
+              a terrorist attack, the FBI demanded Apple change this code to let
+              them access a seized iPhone, Apple famously stood firm and
+              refused. Apple argued that this “back door” would undermine the
+              privacy and security of all their customers, including
+              journalists, world leaders, and engineers maintaining critical
+              infrastructure—which would in turn undermine
+              <em>everyone’s</em> safety. Soon after, the FBI revealed that it
+              had contracted a highly specialized service that, despite Apple’s
+              best efforts, was able to break the security protecting the seized
+              iPhone. This is hardly an isolated case: time and again, when
+              products have used encryption to protect privacy, law enforcement
+              agencies complain loudly about their imminent powerlessness
+              against scary adversaries, while quietly mustering their abundant
+              resources to break through technical barriers and bring the most
+              technically-savvy bad actors to justice.&nbsp;<br />
+            </p>
+
+            <p class="zb-faq__p">
+              Zbay will go as far as it can to protect users’ privacy and
+              anonymity. If governments want to spy on conversations or identify
+              users they might need to go to great lengths to do so. It might be
+              hard, and that’s okay: violating peoples’ privacy in a democracy
+              is <em>supposed</em> to be hard.&nbsp;<br />
+            </p>
+            <p class="zb-faq__p">
+              Unlike centralized services, the Zbay team will not hold any
+              useful data or be a gatekeeper to their ability to do this, and no
+              government will have privileged access to user data on Zbay simply
+              because they are the home jurisdiction of the company. In a world
+              where communication happens on peer-to-peer platforms like Zbay,
+              countries and organizations with advanced offensive hacking and
+              surveillance capabilities will enjoy an advantage when it comes to
+              data collection and enforcement against unlawful behavior. However
+              they will have to choose their targets carefully, since any
+              methods used to enforce the law could also be used by bad actors
+              against legitimate users once widely known. (Which means the Zbay
+              platform or Zcash network will have a basic duty to its users to
+              fix these privacy problems once they are discovered.)&nbsp;<br />
+            </p>
+
+            <p class="zb-faq__p">
+              This pattern places a strong limit on mass surveillance while,
+              given the ever imperfect state of cybersecurity, providing law
+              enforcement with ample options for enforcing against antisocial
+              behavior in important cases.<br />
+            </p>
+
+            <p class="zb-faq__p">
+              We believe that law enforcement by public institutions rooted in
+              democracy—not rules created by private platforms—is the correct
+              way to hold online communities and their participants accountable
+              for their behavior. Right now, governments and shareholders are
+              pressuring large online platforms to arbitrarily create their own
+              private rules, outside the representation guarantees of democratic
+              structures. This is wrong: democracies should not abdicate their
+              role and give unaccountable private power total control over what
+              people can and cannot say online. Instead, democracies should
+              create clear, consistent standards that protect free expression
+              and create public institutions capable of enforcing these
+              principles directly against their most destructive offenders. Zbay
+              is completely compatible with this vision.<br />
+            </p>
+
+            <p class="zb-faq__p">
+              At the same time, every online platform exists in a global reality
+              where some governments are sometimes corrupt, unrepresentative,
+              violent, and repressive. So we must create platforms that give
+              ordinary people the power to resist their local laws, speak truth
+              to power, and—even with the best privacy and anonymity tools when
+              working against well-resourced adversaries like governments—risk
+              getting caught.&nbsp;<br />
+            </p>
+
+            <p class="zb-faq__p">
+              After all, accountability between law and online discussion runs
+              in two directions: for residents of democracies to hold each other
+              accountable, they need to be able to enforce the law—but for
+              residents of non-democracies to hold each other accountable, they
+              need to somehow hold their authoritarian governments accountable,
+              which means being able to break the law. One can say this isn’t
+              the way things should be, but it is the way things are now: much
+              of the world is not governed by democracy. This stark fact means
+              that everyone who cares about democracy must agree governments
+              need strong checks—as strong as we can make them—on their power to
+              control what people do online.<br />
+            </p>
+
+            <p class="zb-faq__p">
+              We believe that all of us—especially those of us who enjoy the
+              benefits of democracy—owe residents of repressive countries the
+              best protections for privacy we can practically muster, so that in
+              pivotal moments they can gather in courage and make their voices
+              heard.<br />
+            </p>
+
+            <p class="zb-faq__p">
+              This belief doesn’t exist in a vacuum. It emerges from a
+              centuries-old discussion on the value of freedom of expression,
+              and is surrounded right now by an ever-accelerating debate pushed
+              forward by a dizzying barrage of terrifying news and political
+              events. We recognize that not all the answers will be visible
+              right now, but we hope that by launching Zbay into the world, we
+              can dig deeper down, past the first wave of superficial responses,
+              down to some thoughtful and robust answer that can last. We
+              welcome and treasure the conversation.<br />
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="zb-footer">
+      <div class="zb-footer__logo-container">
+        <a
+          href="old-home.html"
+          class="zb-footer__logo-link-block w-inline-block"
+          ><img
+            src="./images/logo-lockup--circle--watermark.svg"
+            alt=""
+            class="zb-footer__logo"
+        /></a>
+      </div>
+      <ul class="zb-footer__pri-btns-list">
+        <li class="zb-footer__pri-btn-item">
+          <a href="#why" class="zb-footer__pri-btn w-inline-block">
+            <div class="zb-footer__pri-btn-text">Why Zbay?</div>
+          </a>
+          <a href="#faq" class="zb-footer__pri-btn w-inline-block">
+            <div class="zb-footer__pri-btn-text">FAQ</div>
+          </a>
+        </li>
+      </ul>
+      <ul class="zb-footer__sec-btns-list">
+        <li class="zb-footer__sec-btn-item">
+          <a
+            href="https://twitter.com/zbayapp"
+            class="zb-footer__sec-btn w-inline-block"
+            ><img
+              src="./images/twitter--white.svg"
+              alt=""
+              class="zb-footer__sec-btn-image"
+          /></a>
+        </li>
+        <li class="zb-footer__sec-btn-item">
+          <a
+            href="https://github.com/ZbayApp/zbay"
+            class="zb-footer__sec-btn w-inline-block"
+            ><img
+              src="./images/github--white.svg"
+              alt=""
+              class="zb-footer__sec-btn-image"
+          /></a>
+        </li>
+      </ul>
+      <div class="zb-footer__copyright-text">
+        177 Huntington Ave Suite 1703 Boston, MA 02115
+      </div>
+      <div class="zb-footer__copyright-text">
+        <a href="mailto:contact@zbay.llc">contact@zbay.llc</a>
+      </div>
+    </div>
+    <script
+      src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js"
+      type="text/javascript"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/webflow.js" type="text/javascript"></script>
+    <script src="js/browserDetectionScript.js" type="text/javascript"></script>
+    <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  </body>
 </html>
