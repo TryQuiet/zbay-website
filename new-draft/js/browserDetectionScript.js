@@ -1,51 +1,47 @@
 var linkButton = document.getElementById('zb-autodetect-platform');
+var firstBox = document.getElementById('zb-first-box');
+var secondBox = document.getElementById('zb-second-box');
 var firstOtherLink = document.getElementById('zb-first-other-target-link');
 var secondOtherLink = document.getElementById('zb-second-other-target-link');
-var linkButtonBottom = document.getElementById('zb-autodetect-platform-bottom');
-var firstOtherLinkBottom = document.getElementById('zb-first-other-target-link-bottom');
-var secondOtherLinkBottom = document.getElementById('zb-second-other-target-link-bottom');
 
 const setAttributes = (version) => {
   if (version === 'mac') {
     linkButton.classList.add('zb-hero-button-mac');
   }
   const versions = ['windows', 'mac', 'linux']
-  const bigButtonText = {
+  const downloadText = {
     windows: 'Download for Windows',
     linux: 'Download for Linux',
     mac: 'Download for Mac'
   }
-  const linkText = {
-    windows: 'Windows',
-    linux: 'Linux',
-    mac: 'Mac'
+  const downloadTextOther = {
+    windows: 'Windows?',
+    linux: 'Linux?',
+    mac: 'Mac?'
   }
   var links = {
     windows: 'https://s3.amazonaws.com/release.zbay.app/Zbay+Setup+1.0.67-dev-windows-2.exe',
     linux: 'https://s3.amazonaws.com/release.zbay.app/Zbay-1.0.67-dev-linux-18-2.AppImage',
     mac: 'https://s3.amazonaws.com/release.zbay.app/Zbay-1.0.67-dev-mac-2.dmg'
   };
-  var primaryButtonText = bigButtonText[version];
+  var primaryButtonText = downloadText[version];
   var indexToRemove = versions.indexOf(version);
   versions.splice(indexToRemove, 1);
-  var firstOtherLinkDesc = linkText[versions[0]];
-  var secondOtherLinkDesc = linkText[versions[1]];
+  var firstOtherText = downloadTextOther[versions[0]];
+  var secondOtherText = downloadTextOther[versions[1]];
+  var firstOtherLinkDesc = downloadText[versions[0]];
+  var secondOtherLinkDesc = downloadText[versions[1]];
   var primaryButtonLink = links[version];
   var firstOtherLinkText = links[versions[0]];
   var secondOtherLinkText = links[versions[1]];
   linkButton.innerText = primaryButtonText;
+  firstBox.innerText = firstOtherText;
+  secondBox.innerText = secondOtherText;
   firstOtherLink.innerText = firstOtherLinkDesc;
   secondOtherLink.innerText = secondOtherLinkDesc;
   linkButton.setAttribute('href', primaryButtonLink);
   firstOtherLink.setAttribute('href', firstOtherLinkText);
   secondOtherLink.setAttribute('href', secondOtherLinkText);
-  /* for bottom of page */
-  linkButtonBottom.innerText = primaryButtonText;
-  firstOtherLinkBottom.innerText = firstOtherLinkDesc;
-  secondOtherLinkBottom.innerText = secondOtherLinkDesc;
-  linkButtonBottom.setAttribute('href', primaryButtonLink);
-  firstOtherLinkBottom.setAttribute('href', firstOtherLinkText);
-  secondOtherLinkBottom.setAttribute('href', secondOtherLinkText);
 }
 
 if (navigator.appVersion.indexOf('Win') !== -1) {
