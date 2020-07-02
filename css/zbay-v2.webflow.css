@@ -188,14 +188,13 @@ a:hover {
 
 .zb-hero-button {
   display: block;
-  padding: 19px 40px 19px 71px;
+  padding: 19px 40px 19px 40px;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   border-radius: 4px;
   background-color: #521b74;
-  background-image: url('../images/apple.svg');
   background-position: 30px 15px;
   background-size: 24px;
   background-repeat: no-repeat;
