@@ -144,13 +144,12 @@ html {
         <li id="tor" class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Can I use Tor with Zbay?</h2>
           <p class="zb-faq__p">
-            Yes. Communication with Zcash blockchain is not going through Tor
-            but Zbay allows for P2P communication without Zcash. You can enable it in settings
-            tab. P2P communication uses Tor hidden services and enables almost instant communication.
-            Messages sent are not stored on Zcash blockchain, so they will completely disappear once you close 
-            application.
-            Unfortunately this feature only works if both users are online in the same time. Group chats are
-            not supported but we are working on it.
+            Not yet, but we're working on it. Right now, Zbay bundles Tor,
+            but only uses it to send direct messages, and only when the recipient is also online.
+            When the recipient is not online, Zbay sends and receives messages over the Zcash network,
+            not over Tor. In the future we plan to use Tor for everything,
+            so that using Zbay will be comparably anonymous to using Tor on the web,
+            but until then please do not use Zbay for any activities where anonymity is important.
           </p>
         </li>
         <li class="zb-faq__faq-item">
