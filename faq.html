@@ -141,22 +141,15 @@ html {
             based on the timing of messages) or through other attacks.
           </p>
         </li>
-        <li class="zb-faq__faq-item">
+        <li id="tor" class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Can I use Tor with Zbay?</h2>
           <p class="zb-faq__p">
-            <s>
-              Yes, Zbay includes basic Tor support, which lets you instruct the
-            Zcash node to connect through Tor. However, there are important
-            <a
-              href="https://zcash.readthedocs.io/en/latest/rtd_pages/tor.html"
-              >important warnings</a
-            >
-            about Tor support in Zcash. To use Tor,
-            <a href="https://www.torproject.org/download/"
-              >install Tor Browser</a
-            >, run it, select the “Connect through Tor” option on startup, and
-            make sure the proxy URL is correct.
-          </s> Not at the moment. The option of connecting with Tor was removed with the release of a light client version of Zbay.   
+            Not yet, but we're working on it. Right now, Zbay bundles Tor,
+            but only uses it to send direct messages, and only when the recipient is also online.
+            When the recipient is not online, Zbay sends and receives messages over the Zcash network,
+            not over Tor. In the future we plan to use Tor for everything,
+            so that using Zbay will be comparably anonymous to using Tor on the web,
+            but until then please do not use Zbay for any activities where anonymity is important.
           </p>
         </li>
         <li class="zb-faq__faq-item">
