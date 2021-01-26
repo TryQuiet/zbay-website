@@ -64,8 +64,14 @@ html {
         <li class="zb-faq__faq-item">
           <h2 class="zb-faq__question">Are direct messages private?</h2>
           <p class="zb-faq__p">
-            Zbay sends direct messages in one of two ways. If the other party is offline, or if p2p messaging over Tor is disabled in Zbay's security settings, Zbay sends direct messages via Zcash encrypted memo. This takes several seconds to send and up to a few minutes to receive, and it costs a tiny amount of money, but it lets you leave a message for someone who is offline and be reasonably sure they will receive it. When p2p messaging over Tor is enabled for both users, and the other user is online, Zbay sends direct messages via Tor. (Specifically, Zbay opens a websocket connection over Tor to the v3 onion address that user has registered, and delivers the message as it would to a conventional web server.) This has several advantages for privacy and usability: messages sent via Tor appear instantly, cost no fee, and are not stored permanently on a public blockchain. Currently the message contents are not encrypted before Zbay sends them via Tor, because Zbay can rely on Tor's encryption. Soon we will begin encrypting the message contents too, for defense in depth. Zbay has not been audited and should not be used for any activities where security and privacy are critical, but direct messages sent via Zcash should be as private as
-            any Zcash encrypted memo, and direct messages sent via Tor should be as private as any connection to a v3 onion service over the Tor network. You can learn more about the privacy properties of Zcash encrypted
+            Zbay sends direct messages in one of two ways: 
+            
+            <ol>
+              <li>When one party is offline or has not enabled p2p messaging over Tor, Zbay sends direct messages via Zcash encrypted memo to the user's registered Zcash address. This takes several seconds to send and up to a few minutes to receive, and it costs a tiny amount of money, but it lets you leave a message for someone who is offline and be reasonably sure they will receive it.</li>
+              <li>When both parties are online and have enabled p2p messaging over Tor, Zbay sends direct messages via Tor v3 onion services to the user's registered onion service. Messages sent via Tor appear instantly, cost no fee, and unlike Zcash memos are not permanently stored on a public blockchain.</li>
+            </ol>
+              
+            Currently, Zbay relies on Tor and Zcash for encryption, though at some point we will add encryption at the application layer for defense in depth. Zbay has not been audited and should not be used for any activities where security and privacy are critical, but direct messages sent via Zcash should be as private as any Zcash encrypted memo, and direct messages sent via Tor should be as private as any connection to a v3 onion service over the Tor network. You can learn more about the privacy properties of Zcash encrypted
             memos
             <a href="https://electriccoin.co/blog/encrypted-memo-field/"
               >here</a
