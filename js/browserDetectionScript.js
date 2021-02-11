@@ -21,9 +21,9 @@ const setAttributes = (version) => {
     mac: 'Mac'
   }
   var links = {
-    windows: 'https://github.com/ZbayApp/ZbayLite/releases/download/v2.0.4-zbay-lite/Zbay-Setup-2.0.4-zbay-lite.exe',
-    linux: 'https://github.com/ZbayApp/ZbayLite/releases/download/v2.0.4-zbay-lite/Zbay-2.0.4-zbay-lite.AppImage',
-    mac: 'https://github.com/ZbayApp/ZbayLite/releases/download/v2.0.4-zbay-lite/Zbay-2.0.4-zbay-lite.dmg'
+    windows: 'https://github.com/ZbayApp/ZbayLite/releases/download/v2.2.9-zbay-lite/Zbay+Setup+2.2.9-zbay-lite.exe',
+    linux: 'https://github.com/ZbayApp/ZbayLite/releases/download/v2.2.9-zbay-lite/Zbay-2.2.9-zbay-lite.AppImage',
+    mac: 'https://github.com/ZbayApp/ZbayLite/releases/download/v2.2.9-zbay-lite/Zbay-2.2.9-zbay-lite.dmg'
   };
   var primaryButtonText = bigButtonText[version];
   var indexToRemove = versions.indexOf(version);
