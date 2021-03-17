@@ -21,7 +21,7 @@ const setAttributes = (version) => {
     mac: 'Mac'
   }
   var links = {
-    windows: 'https://s3.amazonaws.com/release.zbay.lite/Zbay+Setup+2.2.12-zbay-lite.exe',
+    windows: 'https://s3.amazonaws.com/release.zbay.lite/Zbay+Setup+2.2.12-zbay-lite.exe ',
     linux: 'https://s3.amazonaws.com/release.zbay.lite/Zbay-2.2.12-zbay-lite.AppImage',
     mac: 'https://s3.amazonaws.com/release.zbay.lite/Zbay-2.2.12-zbay-lite.dmg'
   };
