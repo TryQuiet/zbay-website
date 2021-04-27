@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <title>How it works</title>
   <meta content="How it works" property="og:title">
-  <meta content="How it works" property="twitter:title">
+  <meta content="How it works" propert  y="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -48,143 +48,78 @@ html {
       >
         How Zbay works
       </h2>
-      <p class="zb-p w-clearfix">
+      <p class="zb-p w-clearfix">        
         <span class="zb-drop-cap">Z</span>bay is a Mac, Windows, and GNU/Linux
-        desktop app that uses encrypted memos sent over the Zcash network to
-        build an experience like Slack, Telegram, or Facebook Marketplace. You
-        can register a username, message other users, join channels (group
-        chats), offer items for sale, and buy things—all over the Zcash
-        network. There’s no central server.
+        desktop app that uses a peer-to-peer network built on <a href="https://www.torproject.org/">Tor</a>, <a href="https://libp2p.io/">libp2p</a>, and <a href="https://github.com/orbitdb/orbit-db">OrbitDB</a> to
+        offer a team chat experience like Slack, Telegram, or Discord. You
+        can register a username, join public group chats, message other users, and send or receive money, without depending too much on centralized infrastructure.
       </p>
       <h3 class="zb-h3">
-        Zbay uses Zcash shielded transactions and encrypted memos for
-        everything
-      </h3>
-      <p class="zb-p">
-        What makes Zcash different from Bitcoin or Ethereum is that it has
-        shielded transactions. Shielded transactions can include tiny
-        encrypted memos, which only the recipient can see. The cost per
-        message is very low: penny can send more than a hundred messages. (So
-        we automatically send every Zbay user a small amount of the Zcash
-        currency, ZEC, to get them started.)
+        Zbay makes minimal use of centralized infrastructure
+      </h3>      
+      <p class="zb-p">        
+        Zbay's use of centralized infrastructure is already minimal and we're working on reducing it even further. First, to enable Zcash payments without a 20+ GB storage requirement for each user, we connect directly (not via Tor) to a centralized <a href="https://github.com/adityapk00/lightwalletd">Zcash lightwallet server</a> run by the <a href="https://www.zecwallet.co/">Zecwallet</a> project. We hope to connect to this infrastructure via Tor in the future, but it is not supported yet.
       </p>
       <p class="zb-p">
-        An encrypted memo allows a maximum of just 512 characters, but Zbay
-        squeezes a lot of interesting stuff into it. If you message another
-        user, we send a transaction with a tiny amount of ZEC and an encrypted
-        memo containing the contents of your message and your signature.
-        (Zcash includes no information about the sender of a message, so we
-        have to include your signature so that the recipient will know it's
-        you!)
-      </p>
+        For username registration and peer discovery on startup, we currently rely on centralized infrastructure (both our own, and the lightwallet infrastructure run by Zecwallet), but our goal is to remove these dependencies in the next major release. At that point, an invite link from a community owner will be sufficient to discover peers, register a username, and join a community. 
+      </p>      
       <p class="zb-p">
-        If you message a group of users, we send the exact same kind of
-        message to one address, but everyone in the group has the key to read
-        messages sent to that address. That's what lets you into the group:
-        knowing the address to send to and having the key to read all the
-        messages sent there. Zcash has separate keys for viewing and spending,
-        so just because you can read messages doesn't mean you can spend money
-        sent to the channel—only the user can do that. Unfortunately, there is
-        no way to know who has joined the group, or to remove someone from the
-        group. Access control for channels is very crude for now, but it works
-        and is a starting point.<br />
-      </p>
-
+        Finally, we rely on the Tor network, though this seems perfectly prudent and brings many benefits, including metadata privacy against a wide range of attackers, addresses for peers that are both permanent and unguessable, and the ability to connect any two peers regardless of NATs or firewalls.    
+      </p>      
+        
       <h3 class="zb-h3">
-        Zbay has secure, human-readable usernames and channels
+        Zbay uses libp2p, Websockets, and Tor to connect peers  
       </h3>
-      <p class="zb-p">
-        Since Zbay can send encrypted messages to other addresses, share
-        access to these addresses, and use the contents of these messages
-        however it likes, it can offer familiar experiences like having a
-        username and being able to message people with usernames, without
-        smart contracts. The data live in the blockchain, but the smarts, for
-        now, live in the Zbay app.
+      <p class="zb-p">        
+        <a href="https://libp2p.io/">Libp2p</a> is the underlying p2p network layer for a growing family of well-funded projects, <a href="https://blog.ipfs.io/2020-06-09-libp2p-in-2020/">including Filecoin and Ethereum 2</a>. It lets peers connect over multiple kinds of transports, including WebSockets, which <a href="https://blog.torproject.org/secure-messaging-onion-services-how">work well</a> when used with Tor. To use libp2p with Tor, we create a Tor <a href="https://gitlab.torproject.org/legacy/trac/-/wikis/doc/NextGenOnions">v3 onion service</a> for each peer, and then use a modified WebSocket transport to connect to the onion addresses of other peers.  
       </p>
       <p class="zb-p">
-        If you register a username, we send a message to an address that
-        <em>everyone</em> has the viewing key for. The message says "I hereby
-        register the username @alice, this is my address, and this is my
-        public key." And it's sent to a special address that's hardcoded into
-        the Zbay app. (Soon you will be able to register multiple usernames
-        and switch between them, but right now you can only have one.)<br />
+        In simple terms, each peer runs a simple webserver behind an onion address on the Tor network, and peers connect to each others' servers.<br />
+      </p>
+      <p class="zb-p">
+        Right now, Zbay only operates on one network whose entry node is hardcoded into the app itself, so all messages are public. But this will change soon as we add the ability to create new private communities, each running on their own separate libp2p network.<br />
+      </p>
+
+      <h3 class="zb-h3">Zbay uses IPFS and OrbitDB to sync messages</h3>
+      <p class="zb-p">
+        We could use libp2p <a href="https://github.com/ipfs-shipyard/ipfs-pubsub-room">pubsub</a> for broadcasting a message to all online peers in a given network. But what about peers who are offline? The magic of modern messaging apps like Slack, Discord, Telegram, and Signal (in contrast to older approaches like IRC and Pidgin/OTR) is that users don't miss messages sent while they were offline; in modern messaging apps, these messages appear almost instantly once users come back online. How do we achieve <em>that</em>, without a central server?<br />
       </p>
 
       <p class="zb-p">
-        We do the same thing when you make a channel public. ("I hereby
-        register the channel #bears, this is its address, and this is its
-        viewing key.") The Zbay app can see all the channel registration
-        messages sent to this address and give users a nice searchable list,
-        or make the channel #bears a clickable link if someone mentions it in
-        a message.<br />
-      </p>
-
-      <h3 class="zb-h3">Zbay has moderation</h3>
-      <p class="zb-p">
-        Anyone can send a message to any address they know about, but Zbay can
-        decide which messages it displays and which it ignores, and you can
-        control this. If someone starts spamming you, you can block them and
-        Zbay will recieve their messages but hide them from you. If spam
-        becomes a problem we might start charging people more money to create
-        accounts, or charging them to send a first message to someone else.
-        (Each user could register the minimum spend to contact them for the
-        first time.)<br />
+        <a href="https://scuttlebutt.nz/">Secure Scuttlebutt</a> addresses this problem, but it does so in a way that is very specific to a "social network feed with a single publisher" use-case (think: decentralized Twitter) and would require a lot of awkward stretching to use for a conversation with a mix of participants. The "sync all changes" functionality that Git provides is closer to what we need, and we even used Git in our prototypes! But this was a hack, and bundling Git with Zbay for several different OSes and device types would have been a massive headache.<br />
       </p>
 
       <p class="zb-p">
-        Channel owners can moderate by sending special messages to a channel
-        that tell the Zbay app to ignore a specific message or a problem user.
-        Of course, if channel participants don't like this they can always
-        move to another channel, so channel owners must tread carefully in how
-        they conduct moderation.<br />
+        <a href="https://github.com/orbitdb/orbit-db">OrbitDB</a> ended up being pretty much exactly what we needed, and while it's still somewhat experimental and maintained by a small team, it builds on libp2p and <a href="https://ipfs.io/">IPFS</a> tools that are used more widely. OrbitDB gives us an easy way for offline peers to return and fetch what they missed. We also get some limited guarantees around the integrity of messages and message ordering.<br />
       </p>
 
       <p class="zb-p">
-        Users can even offer items for sale. An offer is a normal message with
-        some special information that Zbay parses to show an ad-like blurb in
-        the channel. Users can message the seller with questions, buy the
-        product, and even include their shipping information in a convenient
-        way. All of this is sent directly to the seller in an encrypted
-        message. Someday, channel owners will be able to set a minimum price
-        for posting an offer to a channel.<br />
+        There's no way to delete data from an OrbitDB, yet. But we should be able to make messages deletable someday by <em>linking</em> to message content from OrbitDB (and then deleting <em>that</em>) or by deleting entire OrbitDBs and recreating them without the deleted messages. The details get messy, and like almost any deletion scheme it requires trusting recipients, but it is possible.<br />
       </p>
-
       <h3 class="zb-h3">
-        Zbay uses encryption, not deletion, to protect privacy
+        Zbay broadcasts private messages to all community members, encrypted to the recipients.
       </h3>
       <p class="zb-p">
-        Messages never get deleted, but deletion may be overrated, or at least
-        much more difficult in practice than it seems. According to the
-        Snowden leaks, America’s NSA is saving a permanent copy of all
-        messages that travel across the Internet. Other countries likely are
-        too. In purely technical terms, when you delete something, whether on
-        a centralized service like Facebook or even on your own computer, it’s
-        hard to be sure it was deleted. Some peer-to-peer networks make
-        deletion of messages the norm, but on a peer-to-peer network any
-        participant with a modified app—from the NSA to a sleazy data
-        collection business—can save every message they see, forever. As
-        Edward Snowden explains in his book
-        <a
-          href="https://www.goodreads.com/book/show/46223297-permanent-record"
-          >Permanent Record</a
-        >, the best way to keep things private is to encrypt information and
-        control the keys, not to rely on deletion.<br />
+        A requirement for any team chat app is the ability to start private conversations with one or more other team members. We want these messages to be eventually visible to offline peers too, since that's what users have come to expect from modern, centralized messaging apps. As sometimes happens with peer-to-peer approaches, the needs of privacy and availability pull in different directions. We believe the best balance is to broadcast private messages to all members of a community, but encrypt them to their intended recipients.<br />
       </p>
-
+      <p class="zb-p">
+        This leaves the problem of metadata privacy within the community. Currently, any member of the community can learn who is talking to whom, and when, and that is not desirable! We plan to addres this in the future by using Tor to deliver messages to the peer-to-peer network anonymously.<br />
+      </p>    
       <h3 class="zb-h3">
-        Zbay can be used with Tor or VPNs for greater anonymity
+        Zbay can use Android apps (we think) to provide always-on peers.
       </h3>
       <p class="zb-p">
-        Finally, there's an important caveat when it comes to anonymity: even
-        though information about the sender of a message is hidden from folks
-        viewing the blockchain, peers on the Zcash network can see the IP
-        addresses of other peers as they post transactions. An attacker could
-        join the network with a lot of peers and then associate transactions
-        (like messages registering a username) to an IP address. This isn't
-        especially expensive. So it could be a good idea to use Zbay over a
-        VPN, Tor, or both if you want increased anonymity, though you should
-        understand the limits of those approaches and the risks too!<br />
+        Our approach to "syncing missed messages" still requires that at least one peer has been online since those messages were sent. It doesn't have to the be <em>same</em> peer; peers can sync messages from one to the next, like relay racers passing a baton. But if no peers are online, or if there was a gap, returning users won't see those messages until a peer who <em>did</em> see them comes back online. That's not great! There will be an invisible gap in the conversation, with a weird UX issue once those old messages resurface again.<br />
       </p>
+      <p class="zb-p">        
+        Our current plan for this is to build a decent Android app that can remain connected to the peer-to-peer network for as long as the phone is turned on and has service. We're currently building a prototype for Android and it's promising, but we don't know how practical this is yet. We've heard that the battery life impact of running Tor onion services in the background is manageable on new phones.<br />
+      </p> 
+      <p class="zb-p">
+        The hope is that if everyone joins the network with all of their devices, even small communities of 5-10 members will have enough always-on peers to minimize these kinds of gaps.<br />
+      </p>     
+      <p class="zb-p">
+        If this doesn't work, another approach would be to let communities add an altruistic (or perhaps a compensated) always-on peer <em>without</em> giving them the keys needed to decrypt messages.<br />
+      </p>       
     </div>
   </div>
   <div class="zb-footer">
